@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 0 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 0 cardCounter ;
+        }
+      </style>
+  
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+        <h1> Cálculo DOS  </h1>
+       <nav class="top-nav">
+        <ul>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Informacion_General.html"> Información general </a> </li>
+          <!-- <li> <a href="https://pablojhh.github.io/CalculoDOS/Notas.html"> Notas  </a> </li> -->
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Ejercicios.html"> Ejercicios  </a> </li>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+        </ul>
+       </nav>
+       <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Ejercicios propuestos primer parcial   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    <h1 class="number-title flexbox"> Ejercicios propuestos primer parcial </h1>   
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio </h2>
+      <p>Demuestra que toda sucesión constante es convergente.</p>
+      <button class="respButton hvr-grow "> Demostración </button>
+                <div class="resp-box flexbox">
+                  <div class="video flexbox">
+                    <a href="https://youtu.be/bI5dQPUzHtA" target="_blank" > Video </a>
+                  </div>
+                </div>
+    </div>
+
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Encuentra una fórmula para el $n$-ésimo término de cada una de las siguientes sucesiones: </p>
+      <ol class="two-column">
+        <li>$\displaystyle{-2, 4, -6,8, \ldots }$</li><br>
+        <li>$\displaystyle{\frac{1}{1}, \frac{-1}{8}, \frac{1}{27}, \frac{-1}{64}, \ldots }$</li><br>
+        <li>$\displaystyle{\frac{2}{6}, \frac{3}{7}, \frac{4}{8}, \ldots }$</li><br>
+        <li>$\displaystyle{\frac{1}{4}, \frac{2}{5}, \frac{1}{2},\frac{4}{7}, \frac{5}{8}, \frac{2}{3}, \frac{7}{10} \ldots }$</li><br>
+        <li>$\displaystyle{1,1,\frac{3}{4}, \frac{1}{2}, \frac{5}{16}, \frac{3}{16},\frac{7}{64}, \frac{1}{16}, \frac{9}{256} \ldots }$</li><br>
+        <li>$\displaystyle{\frac{2}{1}, \left(\frac{3}{2}\right)^2,\left(\frac{4}{3}\right)^3, \left(\frac{5}{4}\right)^4, \ldots }$</li><br>     
+      </ol>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Determine cuales de las siguientes sucesiones convergen o cero. Justifica clara y detallamente tus respuestas</p>
+      <ol class="three-column">
+        <li>$\displaystyle{\left( 2^{n} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{-1}{2^{n}} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{n^{2}}{n^{2} + 1} \right)_{n=1}^{\infty}}$</li><br>
+      </ol>
+      
+    </div>
+
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Considera la sucesión $\left(a_{n} \right)_{n \geq 1}$ tal que $a_{n} := \displaystyle{ \frac{n}{n+1} }$, para todo $n \in \mathbb{N}$. 
+       
+      </p>
+      <ul>
+        <li> Utiliza la definición de convergencia de sucesiones en $\mathbb{R}$ para probar que 
+          $\displaystyle{\lim_{n\to \infty } a_{n}} =1$.
+        </li>
+      <li><p>Luego, encuentra  $N \in \mathbb{N}$ tal que:</p>
+        <ol class="two-column">
+          <li>$|a_{n} - 1| < 0.0001$ para todo $n\geq N$</li><br>
+          <li>$|a_{n} - 1| < 0.00001$ para todo $n\geq N$</li><br>
+        </ol>
+      </li>
+      
+    </div>
+    
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Considera la sucesión $\left(b_{n} \right)_{n \geq 1}$ tal que   $b_{n} := \displaystyle{ \left(\frac{1}{3}\right)^{n} }$, 
+        para todo $n \in \mathbb{N}$. 
+      </p>
+      <ul>
+        <li>Utiliza la definición de convergencia de sucesiones en $\mathbb{R}$ para probar que
+          $\displaystyle{\lim_{n\to \infty } b_{n}} =0$ 
+        </li>
+        <li><p>Luego, encuentra  $N \in \mathbb{N}$ tal que:</p>
+        <ol class="two-column">
+          <li>$|b_{n}| < 10^{-2}$ para todo $n\geq N$</li><br>
+          <li>$|b_{n}| < 10^{-5}$ para todo $n\geq N$</li><br>
+        </ol>
+        </li>
+      </ul> 
+  
+      
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Utilizando la definicion de convergencia de sucesiones determine si las siguientes sucesiones convergen o divergen,
+        en caso de que sean convergentes establece el límite $L$ y prueba detalladamente que en efecto
+        $\displaystyle{\lim_{n\to \infty}a_{n}}=L$. Justifica claramente tus respuestas</p>
+  
+      <ol class="two-column">
+        <li>$\displaystyle{\left( 12 \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( n+5 \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{1}{n+2} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{5n-1}{12n+9} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( -2^{-n} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( n^{-2} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( (-1)^{n} n^{2} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( 10^{-\frac{1}{n}} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{3n}{n+ 2} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{n}{n+ n^{-1}} \right)_{n=1}^{\infty}}$</li><br>
+        <!-- <li>$\displaystyle{\left( \left(\frac{1}{3} \right)^{n} \right)_{n=1}^{\infty}}$</li><br> -->
+        <li>$\displaystyle{\left( \frac{n}{n^{2} + 1} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{2n}{n^{2} + 1} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{2n^{2}}{n^{2} + 1} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{n^{2}}{n + 1} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{(-1)^{n}n}{n + 1} \right)_{n=1}^{\infty}}$</li><br>
+        <li>$\displaystyle{\left( \frac{3n+5}{7n-4} \right)_{n=1}^{\infty}}$</li><br>
+                
+      </ol>
+    </div>
+
+    
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Sea $a\in \mathbb{R}$ tal que: $|a|< 1$. Demuestra que la sucesión $\left( a^{n}\right)_{n \geq 1}$
+        es convergente y converge a $0$
+      </p>
+
+      <p><b>Hint:</b> Puedes considera los casos: $a=0$  y $a\not= 0$ o bien los casos:  $a=0$, $-1< a < 0$   y $0 < a < 1$ </p>
+      
+    </div>
+
+      
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Sea $f$ una función definida en $\mathbb{R}_{+}$. Demuestra que si $\displaystyle{\lim_{x \to \infty}f(x) }$ existe, entonces 
+        la sucesión $\left( a_{n}\right)_{n\geq 1}$ tal que $a_{n}:= f(n)$ para todo $n\in \mathbb{N}$, es convergente 
+        y converge al mismo límite, es decir, si existe $L\in \mathbb{R}$ tal que $\displaystyle{\lim_{x\to \infty} f(x)}$, entonces
+        $$\lim_{n\to \infty} a_{n}= L$$ 
+      </p>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+    <p>Sea $\left( a_{n}\right)_{n\geq 1}$  es una sucesión de números enteros i.e. $a_{n} \in \mathbb{Z}$ para todo 
+      $n\in \mathbb{N}$. Si $(a_{n})_{n\in \mathbb{N}}$ es convergente con $\displaystyle{\lim_{n\to \infty}} a_{n}=L$, 
+      utiliza la definición de sucesión convergente para probar que existe $N\in \mathbb{N}$ tal que $a_{n}=L$
+       para todo $n \geq N$.</p>
+    </p>
+    </div>
+
+    <div class="ejercicio-box">
+      <h2 class="number-title" id="Ejer:PropiedadesLimitesSucesiones"> Ejercicio </h2>
+      <p>  Da un ejemplo de dos sucesiones de números reales $(a_n)_{n=1}^\infty$ y $(b_n)_{n=1}^\infty$ convergentes, tales que 
+        $a_n < b_n$ para toda $n\in \mathbb{N}$ y sin embargo  $$\lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n.$$
+      </p>
+    </div>
+
+    <div class="ejercicio-box">  <h2 class="number-title"> Ejercicio </h2>
+      <p>Sea $(a_n)_{n=1}^\infty$ una sucesión en $\mathbb{R}$. Prueba que si $(a_n)_{n=1}^\infty$ es monótona decreciente  
+        y acotada inferiormente, entonces la sucesión $(a_n)_{n=1}^\infty$ es  convergente.
+      </p>
+
+      
+      <p><b>Hint:</b> La sucesion converge a $\beta:=\inf\{ a_{n} \colon n \in \mathbb{N} \}$. Justifica adecuadamente porque existe 
+        $\beta$ </p>
+      </div>
+
+    <div class="ejercicio-box">  <h2 class="number-title"> Ejercicio </h2>
+      <p>Sea $(a_n)_{n=1}^\infty$ una sucesión de números reales convergente con $\displaystyle{\lim_{n\to \infty} a_{n}} = L$. 
+        Prueba que:
+        <ol>
+          <li>Si $L>0$, entonces existe $N\in \mathbb{N}$ tal que $a_{n} >0$ para toda $n\geq N$</li><br>
+          <li>Si $L < 0$, entonces existe $N\in \mathbb{N}$ tal que $a_{n} < 0$ para toda $n\geq N$</li><br>
+          <li>Si $L\not= 0$, entonces existe $N\in \mathbb{N}$ tal que $a_{n} \not= 0$ para toda $n\geq N$</li>
+        </ul> 
+      </p>
+    </div>
+
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+    <p>Sea $(a_n)_{n=1}^\infty$ una sucesión de números reales. Prueba que $\left( a_{n}\right)_{n\geq 1}$  converge a $0$
+      si y sólo si  la sucesión  $\left(|a_{n}|\right)_{n\geq 1}$ converge a $0$.
+    </p>           
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <p>
+        <ol>
+          <li>Sea $(a_n)_{n=1}^\infty$ una sucesión de números reales. Prueba que $\left( a_{n}\right)_{n\geq 1}$  converge a $a$
+            entonces la sucesión  $\left(|a_{n}|\right)_{n\geq 1}$ converge a $|a|$.
+          </li><br>
+          <li> ¿Es verdad que si la sucesión $\left(|a_{n}|\right)_{n\geq 1}$ converge, entonces la sucesión 
+            $\left(a_{n}\right)_{n\geq 1}$ también converge? Prueba o da un contraejemplo.
+          </li>
+      </p>           
+      </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+    <p>Demuestra que la sucesion $\displaystyle{ \left(\frac{(−1)^n}{n}\right)_{n=1}^{\infty}}$ converge a cero.</p>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <p>Sea $c\in \mathbb{R}$ tal que $|c|>1$. Demuestra que la sucesion $(c^{n})_{n\in \mathbb{N}}$ no es una sucesión convergente.</p>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+    <p>Sean $(a_n)_{n=1}^\infty$ y $(b_n)_{n=1}^\infty$ sucesiones de números reales tales que $(a_n)_{n=1}^\infty$ es convergente con 
+      $\displaystyle{\lim_{n\to \infty}} a_{n}=0$ y $(b_n)_{n=1}^\infty$ es acotada. Prueba que la sucesión $(a_n\cdot b_n)_{n=1}^{\infty}$ converge a $0$
+    </p>
+    </div>
+  
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <p>Sea $A \subset \mathbb{R}$ tal que $A\not= \emptyset$ y $A$ acotado superiormente. Prueba que si $\alpha = \sup(A)$,  
+        entonces existe una sucesión $(a_{n})_{n=1}^{\infty}$  de números en $A$ i.e. $a_{n} \in A$ para todo $n\in \mathbb{N}$ 
+        tal que $(a_{n})_{n=1}^{\infty}$ converge a $\alpha$
+      </p>
+      </div>
+
+      <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <p>
+        Sean \(a,b,c \in \mathbb{R}\) tales que \(a< b< c\). Demuestra que para todo \(L\in \mathbb{R}\) se satisface:
+      \[
+      |b-L| \leq |a-L|+|c-L|.
+      \]
+      </p>
+      <p><b>Sugerencia:</b> Considera los casos \(L\leq a\),
+        \(a< L < c \) y \(c \leq L\) junto con la desigualdad del triángulo.
+      </p>
+
+      <!-- 
+      <button class="respButton hvr-grow "> Demostración </button>
+      <div class="resp-box flexbox">
+        <div class="video flexbox">
+          <a href="https://youtu.be/pcmgRNyOOtw" target="_blank" > Video </a>
+        </div>
+      </div> -->
+    
+      </div>
+
+      
+
+      <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <ol>
+        <li>Demuestra que
+          $$ L=\lim_{n\to \infty} a_{n+1}.$$
+        </li>
+        <li>Más en general, toma \(p\in \mathbb{N}\) fijo y define una nueva sucesión
+          \(b_n:=a_{n+p}\). Demuestra que la sucesión \((b_n)_{n=1}^\infty\) converge si
+          y sólo si \((a_n)_{n=1}^\infty\) converge y que ambas tienen el mismo límite.
+        </li>
+      </ol>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p><b>Desigualdad de Bernoulli</b></p>
+      <p>Utiliza inducción matemática para probar que si $x>-1$, entonces para todo  $n\in \mathbb{N}$ se satisface: 
+        $$(1+nx)\leq (1+x)^{n}.$$</p>
+    </div>
+
+    
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Para cada uno de los incisos, justifica detalladamente lo establecido.</p>
+        <ol class="two-column">
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{1}{2^n}\right)}=0$</li><br>   
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{1}{2n-1}\right)}=0$</li><br> 
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{(-1)^{n+1}}{n}\right)}=0$</li><br>  
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{(-1)^{n+1}}{n}\right)}=0$</li><br>        
+          <li>$\displaystyle{\lim_{n \to\infty} \left(1 - \frac{1}{10^n}\right)=1}$</li><br> 
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{2^n}{n!}\right)=0}$</li><br> 
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{n!}{n^n}\right)=0}$</li><br>
+          <li>$\displaystyle{\lim_{n \to\infty} \left(\frac{2n^5 - 3n + 20}{5^6+2}\right)=0}$</li><br> 
+        </ol>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio</h2>
+      <p>Sean $(a_n)_{n=1}^\infty$ una sucesión de números reales tales que 
+        $(a_n)_{n=1}^\infty$ es convergente con $\displaystyle{\lim_{n\to \infty}} a_{n}=L$
+        Para cada $n\in \mathbb{N}$ definamos 
+        $s_{n}:= \displaystyle{\frac{a_{1}+a_{2} + \cdots + a_{n}}{n}}$.
+          Demuestra que  la sucesión $\left(s_n\right)_{n=1}^{\infty}$ converge a $L$, es decir, prueba que
+        se satisface: $\displaystyle{\lim_{n\to \infty}\displaystyle{\frac{a_{1}+a_{2} + \cdots + a_{n}}{n}} =L}$
+      <!-- </p>
+      <p><b>Observación:</b> Cuando esto se verifica se dice que la sucesión $(a_n)_{n=1}^\infty$  converge en media.</p> -->
+      </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Para cada uno de los siguientes incisos, determina si la sucesión dada es 
+        monotona creciente, monotona decreciente o ninguna de estas.
+        Justifica detalladamente tu respuesta.</p>
+        <ol class="three-column">
+          <li>$\displaystyle{\left(\frac{2n}{3n+1}\right)_{n=1}^{\infty}}$</li><br>   
+          <li>$\displaystyle{\left(\frac{5n-2}{4n+1}\right)_{n=1}^{\infty}}$</li><br> 
+          <li>$\displaystyle{\left(\frac{3n}{1+3^n}\right)_{n=1}^{\infty}}$</li><br>   
+          <li>$\displaystyle{\left(\frac{n}{2^n}\right)_{n=1}^{\infty}}$</li><br>   
+          <li>$\displaystyle{\left(\frac{n!}{2^n}\right)_{n=1}^{\infty}}$</li><br>  
+          <li>$\displaystyle{\left(\frac{n^2-1}{n}\right)_{n=1}^{\infty}}$</li><br> 
+          <li>$\displaystyle{\left(\frac{n^n}{n!}\right)_{n=1}^{\infty}}$</li><br>  
+          <li>$\displaystyle{\left(\prod_{k=1}^{n}\frac{2k-1}{2k}\right)_{n=1}^{\infty}}$</li><br>  
+        </ol>
+    </div>
+
+    <div class="ejercicio-box"> <h2 class="number-title"> Ejercicio </h2>
+      <p>Sea $(m_{n})_{n=1}^{\infty}$ una sucesión de números naturales i.e. 
+        $m_{n}\in \mathbb{N}$ para todo $n\in \mathbb{N}$. Prueba por inducción que 
+        $m_{n}\geq n$ para todo $n\in \mathbb{N}$.
+
+      </p>
+    </div>
+
+
+
+</body>

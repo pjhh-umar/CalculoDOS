@@ -1,0 +1,390 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+  
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title{
+        counter-reset: sectionCounter 1 subsectioncounter ;
+      } */
+      h1.page-title{
+        counter-reset: semanaCounter 1 sectionCounter  subsectionCounter;
+      }
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+    <!-- Top Menu  -->
+    
+         
+    <header class="main-header">
+        
+      <div class="logo_superior_umar">
+      <a href="https://www.umar.mx" target="_blank"><img src="/Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+      </div>
+      <div class="contenedor_titulo">
+      <div class="title">Cálculo II</div>
+      <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+      <div class="subsubtitle">Licenciatura en Actuaría </div>
+      <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+  
+      </div>
+
+  
+    </header>
+
+    <nav class="top-nav">
+      <ul>
+        <li> <a href="https://pablojhh.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
+        <li> <a href="https://pablojhh.github.io/CalculoDOS/Informacion_General.html">Información</a> </li>
+        <li> <a href="https://pablojhh.github.io/CalculoDOS/Notas.html"> Notas  </a> </li>
+        <li> <a href="https://pablojhh.github.io/CalculoDOS/Ejercicios.html"> Ejercicios</a> </li>
+        <li> <a href="https://pablojhh.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+      </ul>
+      </nav>
+    <!-- 
+      <nav class="small-nav" align=right>
+        <button onclick="myFunction()">Claro/Obscuro 
+      </nav> 
+    -->
+
+  <!-- This part is for title in tab-->
+         
+      <title>Semana 1</title>
+      </head>  
+
+      <body class="fondo-body" ><h1 class="page-title"> Semana 1 </h1>   
+
+
+      <h1 class="page-subtitle">Etapas en la solución de un problema</h1>   
+      <div class="nota-box"><h1 class="number-title"> Introducción</h1>  
+      <p>
+        El proceso de <b>resolución de un problema</b> mediante una computadora comprende desde la <em>descripción inicial del
+        problema</em> hasta el <em>desarrollo de un programa</em>  de computadora que lo resuelva.</b> 
+      </p>
+    
+      <p>En general, las etapas que debemos seguir para <em><b>solucionar algún problema</b></em> son:</p> 
+    
+        <p>
+          <div class="flexbox">
+              <img src="../Imagenes/Etapas_solucion_problema_.jpg" alt="", width="100%" height="auto">
+          </div>
+      </p>
+    
+       <p>El proceso de <em><b>diseño de un programa</b></em>  tiene una serie de etapas que generalmente deben
+        seguir todos los <em>programadores</em>:
+        <ol>
+          <li><b>Definición o análisis del problema</b>.</li>
+          <li><b>Diseño del algoritmo</b>.</li>
+          <li><b>Transformación del algoritmo en un programa</b>.</li>
+          <li><b>Ejecución y validación del programa</b>.</li>
+        </ol>
+       </p>  
+      </div>
+    
+      
+    <div class="nota-box"><h1 class="number-title"> Definición o análisis del problema</h1>
+    
+      <p>La definición del problema comienza analizando los <b>requisitos del usuario</b>;
+       estos requisitos con frecuencia suelen ser imprecisos y difíciles de escribir.
+       Por esta razón en este etapa de especificación se requiere normalmente una gran
+       <b>comunicación</b> entre los <b>programadores</b> y los futuros <b>usuarios finales</b>.
+      </p>
+    
+      <p>En esta etapa también tenemos que especificar claramente aquella información que es  necesaria para
+         la resolución del problema. Para hacer el análisis es de gran utilidad  responder  a las siguientes preguntas:<br>
+          <ul>
+            <li><b>¿Qué <em>datos(información) de entrada(s)</em> tiene el problema?</b></li>
+            <li><b>¿Cuál es la <em>salida</em> deseada?</b></li>
+            <li><b>¿Qué <em>método</em> produce la salida deseada a partir de los datos de entrada?</b></li>
+          </ul>
+      </p>
+    </div>
+      
+    <div class="nota-box"><h1 class="number-title"> Diseño del algoritmo</h1> 
+      
+      <p>Casi inconscientemente, los humanos efectuamos cotidianamente una serie de pasos, procedimientos o acciones que nos permiten
+        <b>alcanzar un resultado</b> o <b>resolver un problema</b>. <!-- Continuamente seguimos una serie de pasos o conjunto de acciones que nos
+        permiten alcanzar un resultado -->Esta serie de pasos, procedimientos o acciones, comenzamos a aplicarlas desde que
+        empieza el día, por ejemplo cuando <b>tomamos un baño</b>.<!--  O bien, por ejemplo realizamos una serie de pasos que 
+        nos permitan alcanzar otro resultado específico: <b>desayunar</b>.--> La historia se repite innumerables veces durante  
+        el día. En realidad todo el tiempo estamos aplicando <em>algoritmos</em> para resolver problemas.</p>
+    </div>
+        <div class="nota-box"><h2 class="number-title"> Algoritmo</h2>
+    <p>A estas alturas es importante definir el concepto de <em><b>algoritmo</b></em>. El nombre procede del matemático persa
+      <b>Abu Ja’far Mohammed ibn Musa al-Jowârizmî</b>,  muy conocido durante la Edad Media por sentar las bases del Álgebra.</p>
+      
+    <p><b><u>Definición:</u></b> Un <b>algoritmo</b> es un conjunto ordenado de pasos ejecutables que permiten obtener un resultado determinado a 
+       partir de ciertos datos de partida y que cumple las siguientes características: </p>
+      
+      <ol>
+        <li>
+          <b>Finito:</b> Debe acabar siempre tras un número finito de pasos, si bien este número de pasos puede ser 
+          arbitrariamente grande.
+         </li><br>
+         <li>
+          <b>Definibilidad:</b> Cada paso del algoritmo debe definirse de modo claro y preciso. Las acciones del algoritmo 
+          deben estar expresadas sin ambigüedad.
+         </li><br>
+         <li>
+          <b>Efectividad:</b> Las operaciones del algoritmo deben ser básicas, estar expresadas de modo exacto y deben ejecutarse en un
+            tiempo finito.
+         </li><br>
+         <li><b>Entrada:</b> Todo algoritmo debe tener cero o más datos de entrada.</li><br>
+         <li><b>Salida:</b> Todo algoritmo debe tener cero o más datos de salida.</li>
+      </ol>
+       </p>
+    
+       <p>En general, un algoritmo consta de tres secciones o modulos pincipales. </p>
+       <p>
+        <div class="flexbox">
+            <img src="../Imagenes/Secciones_algoritmo.JPG" alt="", width="auto" height="auto">
+        </div>
+    </p>
+    </div>
+
+    
+      
+    
+    <div class="nota-box"><h2 class="number-title"> Construccion del algoritmo</h2>
+      
+    <p>
+      Durante la etapa de <em><b>diseño del algoritmo</b></em>  hay que indicar la serie de  acciones para llevar a cabo  
+       la tarea solicitada o resolver el problema planteado,  lo que se traduce en la <b>construcción de un algoritmo</b>. 
+       Los métodos más eficaces se basan en la técnica <b><em>divide y vencerás</em></b>:
+    </p>
+    
+    <center>
+      <b>El problema se divide en subproblemas, y a continuación se divide cada uno de estos subproblemas en otros hasta que pueda 
+      ser implementada una solución.</b>
+    </center>
+    
+    <p>
+      Esta etapa de diseño es bastante larga, pero hay que tener en cuenta que el gasto de tiempo en la etapa de diseño será ahorro de tiempo cuando se escriba
+      y depure el programa. El resultado final del diseño es una solución que debe ser fácil de traducir a <em>estructuras de datos</em> y <em>estructuras
+      de control</em> de un <b>lenguaje de programación</b> específico.
+    </p>
+    </div>
+
+
+    <div class="nota-box"><h2 class="number-title"> Ejemplo</h2> 
+      
+      <p>Escriba un algoritmo para determinar si un número entero positivo $n$ es par o impar.</p>
+      
+      <p><em><b>Datos:</b></em> &nbsp;  $n$ un entero positivo.</p>
+      <p><em><b>Análisis del problema:</b></em> Para saber si $n$ es un número par o impar
+        tenemos que analizar el resto de dividir $n$ entre $2$.</p>
+    
+            <button class="respButton hvr-grow ">  Solución       </button>
+            <div class="resp-box flexbox">
+              <div class="flexbox">  
+            <ol>
+            <li>Inicio</li>
+            <li>Realizar la division entera de $n$ entre $2$</li>
+            <li>Si el resto de la división es cero, escribe que el número es par y ve al paso $4$; de lo contrario, 
+              escribe que $n$ es un número impar.</li>
+            <li>Fin</li>
+            </ol>
+            </div>
+              </div>
+      
+          <!-- <ul>
+            <li>Calcular el m.c.m. o M.C.D.  de dos números.</li>
+            <li>Decidir si un número es primo.</li>
+            <li>Encontrar el numero máximo o mínimo de un conjunto finito de números.</li>
+          </ul>-->  
+          </p> 
+    </div>
+
+    <div class="nota-box"><h2 class="number-title"> Ejemplo</h2> 
+      <p>Escriba un algoritmo para determinar si un número entero  $n$ es  positivo, negativo o cero</p>
+      <p><em><b>Datos:</b></em> &nbsp;  $n$ un entero.</p>
+      <p><em><b>Análisis del problema:</b></em> Para saber si $n$ es un número positivo, négativo o cero 
+        debemos determinar si $n$ se encuentra a la izquierda, a la derecha o bien es el precisamente 
+        igual a cero.
+      </p>
+            <button class="respButton hvr-grow ">  Solución       </button>
+            <div class="resp-box flexbox">
+              <div class="flexbox">  
+            <ol>
+            <li>Inicio</li>
+            <li>Si $n>0$, entonces escribe que $n$ es un número positivo y ve al paso $5$ de lo contrario continua.</li>
+            <li>Si $n< 0$, entonces escribe que $n$ es un número negativo y ve al paso $5$ de lo contrario continua. </li>
+            <li>Si $n=0$, entonces escribe que $n$ es igual a cero. </li>
+            <li>Fin</li>
+            </ol>
+            </div>
+              </div>
+      
+          <!-- <ul>
+            <li>Calcular el m.c.m. o M.C.D.  de dos números.</li>
+            <li>Decidir si un número es primo.</li>
+            <li>Encontrar el numero máximo o mínimo de un conjunto finito de números.</li>
+          </ul>-->  
+          
+    </div>
+
+
+    <div class="nota-box"><h2 class="number-title"> Ejemplo</h2> 
+      <p>Escriba un algoritmo para determinar la suma de todos los números pares entre  $1$ y $1\,000$.</p>
+      
+      <p><em><b>Análisis del problema:</b></em> El problema consiste en sumar $2 + 4 + 6 + 8+ \cdots + 1\, 000$. 
+            Definiremos dos nuevas variables auxiliares para resolver el problema,  $Sum$ y $Num$, la variable $Sum$ representará  las sumas 
+            sucesivas $(2+4), (2+4+6), (2+4+6+8), \ldots$. Mientras que $Num$ denotará el número par a sumar.</p>
+            <button class="respButton hvr-grow ">  Solución       </button>
+            <div class="resp-box flexbox">
+              <div class="flexbox">  
+            <ol>
+            <li>Inicio</li>
+            <li>Hacer $Sum$ igual a $0$</li>
+            <li>Hacer $Num$ igual a $2$</li>
+            <li>Sumar $Num$ a $Sum$ y actualizar el valor de $Sum$ a este resultado, i.e. El nuevo valor de $Sum$ es 
+              el valor previo de $Sum$ más $Num$. </li>
+            <li>Incrementar $Num$ en 2 unidades.</li>
+            <li>Si $Num$ es menor o igual que $1\,000$, entonces ir al paso 4. En caso contrario escribe 
+              el último valor que tiene  $Sum$. </li>
+            <li>Fin</li>
+            </ol>
+            </div>
+              </div>
+      
+          <!-- <ul>
+            <li>Calcular el m.c.m. o M.C.D.  de dos números.</li>
+            <li>Decidir si un número es primo.</li>
+            <li>Encontrar el numero máximo o mínimo de un conjunto finito de números.</li>
+          </ul>-->  
+          </p> 
+    </div>
+          
+    <div class="nota-box"><h2 class="number-title"> Ejemplo</h2> 
+        <p>Escriba un algoritmo para determinar si un número entero positivo $p$
+          es primo o no.<br>
+          <p><em><b>Datos:</b></em> &nbsp;  $p$ un entero positivo</p>
+          <p><em><b>Análisis del problema:</b></em> Recordemos que un número entero positivo es primo si 
+            tiene unicamente dos divisores: $1$ y $p$. Para resolver el problema consideremos la
+            variable auxiliar,  $Divisor$  para representar a los divisores de $p$,
+            tenemos que realizar divisiones sucesivas para determinar si $p$ es primo. 
+            sumar sucesivas </p>
+    
+    
+        <button class="respButton hvr-grow ">  Solución       </button>
+        <div class="resp-box flexbox_">
+          <div class="flexbox_">  
+          
+           <ol>
+           <li>Inicio</li>
+           <li>Si $p$ es igual a $2$, entonces escribir "$p$ es primo" e ir al paso $8$. En caso contrario
+            continuar.
+           </li>
+           <li>Hacer $Divisor$ <font size=5>&#8592;</font> 2</li>
+           <li>Realiza la división entera de $p$ entre $Divisor$ </li>
+           <li>Si el residuo de la división es igual a $0$, escribir "$p$ no es primo" e ir al paso $8$. 
+            En caso contrario continuar. </li>
+           <li>Hacer $Divisor$ <font size=5>&#8592;</font> $Divisor$ +1 </li>
+           <li>Si $Divisor$ es igual a $p$ escribir "$p$ es primo" e ir al paso $8$. En caso contrario ir al paso 4 </li>
+           <li>Fin</li>
+          </ol>
+          </div>
+        </div>
+       
+        </p></div>
+    
+        <!-- <ul>
+           <li>Calcular el m.c.m. o M.C.D.  de dos números.</li>
+           <li>Decidir si un número es primo.</li>
+           <li>Encontrar el numero máximo o mínimo de un conjunto finito de números.</li>
+         </ul>-->  
+        
+        
+        
+    <div class="nota-box"><h2 class="number-title"> Ejemplo</h2> 
+        <p>Escriba un algoritmo para determinar si un número entero positivo $p$
+        es primo o no.<br>
+        <p><em><b>Datos:</b></em> &nbsp;  $p$ un entero positivo</p>
+        <!-- Donde:&nbsp; &nbsp; &nbsp; $p$ es -->
+        
+        <p><em><b>Análisis del problema:</b></em> Recordemos que un número entero positivo es primo si 
+          tiene unicamente dos divisores: $1$ y $p$. Para resolver el problema consideremos dos 
+          variables auxiliares,  $divisor$ y $Contador$, la variable $Divisor$  la utilizaremos 
+          para representar a los divisores de $p$, y la variable $Contador$ para llevar la cuenta de los divisores 
+          que tiene $p$. Realizaremos  divisiones sucesivas para contar a los divisores de  $p$ y a partir de 
+          la cantidad de divisores concluiremos si $p$ es primo o no. 
+        </p>
+    
+    
+      <button class="respButton hvr-grow ">  Solución       </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">  
+        
+         <ol>
+         <li>Inicio</li>
+         <li>Hacer $Contador$ <font size=5>&#8592;</font> 1 # El $1$ es divisor de cualquier número.</li>
+         <li>Hacer $Divisor$ <font size=5>&#8592;</font> 2 </li>
+         <li>Hacer $Residuo$ <font size=5>&#8592;</font> Residuo de dividir  $p$ entre $Divisor$ (sin decimales) </li>
+         <li>Si $Residuo$  es igual a $0$, entonces hacer $Contador$ <font size=5>&#8592;</font> $Contador$ + 1. En caso 
+             contrario continuar. </li>
+         <li>Hacer $Divisor$ <font size=5>&#8592;</font> $Divisor$ +1 </li>
+         <li>Si  $Divisor$ es menor o igual que $p$, ir al paso $4$. En caso contrario, continuar. </li>
+         <li>Si  $Contador$ es igual a $2$, escribir "El número $p$ es primo". En caso contrario escribir 
+             "El número $p$ no es primo" </li>
+         <li>Fin</li>
+        </ol>
+        </div>
+        
+      </div>  
+    </p>
+    </div>
+
+    <div class="nota-box"><h2 class="number-title">Observación</h2>
+    <p> No existen reglas específicas que nos permitan resolver un problema. Sin embargo, es posible  ofrecer un
+      conjunto de técnicas y herramientas metodológicas que permitan flexibilizar y estructurar el razonamiento
+      utilizado en la solución de un problema. Obteniendo finalmente la construcción de algoritmos eficientes.
+    </p>
+      
+    <p>
+      Las dos <b>herramientas más comúnmente utilizadas para diseñar algoritmos</b> son: <b><em>diagramas de flujo</em></b>
+      y <b><em>pseudocódigos</em></b>. De hecho, una de las mejores formas de <b>aprender  a programar</b> es empezar por los <em>diagramas de flujo</em> y 
+      <em>pseudocodigo</em>. Ambos facilitan e inducen  la resolucion de problemas  mediante <em>algoritmos</em></p>
+      
+        
+    </div>
+    </body>

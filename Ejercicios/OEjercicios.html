@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 3 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 3 cardCounter ;
+        }
+      </style>
+  
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+      <h1> Cálculo DOS  </h1>
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pablojhh.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pablojhh.github.io/CalculoDOS/Informacion_General.html"> Información general </a> </li>
+            <!-- <li> <a href="https://pablojhh.github.io/CalculoDOS/Notas.html"> Notas  </a> </li> -->
+            <li> <a href="https://pablojhh.github.io/CalculoDOS/Ejercicios.html"> Ejercicios  </a> </li>
+            <li> <a href="https://pablojhh.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+        </nav>
+       <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Ejercicios propuestos examen ordinario   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    <h1 class="number-title flexbox"> Ejercicios propuestos ordinario parcial </h1>   
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>
+          Calcular las siguientes integrales indefinidas utilizando una substitución apropiada.
+      </p>
+
+    <ol class="three-column">
+      <li>$\displaystyle{\int \frac{\mathrm{sen}(\mathrm{ln}(4x^2))}{x} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{\mathrm{sec}^{2}(\mathrm{ln}(x))}{2x} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{x}{x^{4} +4}dx}$.</li>   
+      <li>$\displaystyle{\int e^{x}\mathrm{sec}^{2}(e^{x})dx}$.</li>     
+      <li>$\displaystyle{\int \frac{\mathrm{sec}^{3}(x) + e^{\mathrm{sen}(x)}}{\mathrm{sec}(x)} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{t^{2} \mathrm{cos}(t^{3} - 2)}{\mathrm{sen}(t^{3} - 2)} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{(6t -1) \mathrm{sen}(\sqrt{3t^{2} - t -1})}{\sqrt{3t^{2} - t -1}} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{1+ \mathrm{cos}{2x}}{\mathrm{sen}^{2}(2x)}dx}$.</li>  
+      <li>$\displaystyle{\int \mathrm{cos}^{2}(x)\mathrm{sen}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{cos}^{5}(x)\mathrm{sen}^{3}(x) dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{cos}^{5}(x)\mathrm{sen}^{4}(x) dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{cos}^{2}(ax)\mathrm{sen}(ax) dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{sen}^{6}(x) dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{cos}^{4}(ax) dx} $.</li>  
+      <li>$\displaystyle{\int \mathrm{sec}^{5}(x)\mathrm{tan}(x) dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{sec}^{6}(x)\mathrm{tan}^{2}(x) dx} $.</li>   
+      <li>$\displaystyle{\int \sqrt{\mathrm{tan}}\left(x\right) \sec^{4}(x) dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{cos}(x)\mathrm{sen}^{4}(\mathrm{sen}(x)) dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{sen}^{-\frac{2}{3}}(x)\mathrm{cos}^{3}(x) dx} $.</li> 
+      <li>$\displaystyle{\int \frac{\mathrm{sen}^{3}(\mathrm{ln}(x))\mathrm{cos}^{3}(\mathrm{ln}(x))}{x} dx}$ </li>
+      <li>$\displaystyle{\int \frac{\mathrm{sen}^{2}(x)}{\mathrm{cos}^{4}(x)} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{\mathrm{sen}^{3}(x)}{\mathrm{cos}^{4}(x)} dx}$.</li> 
+      <li>$\displaystyle{\int \frac{\mathrm{cos}^{4}(x)}{\mathrm{sen}^{8}(x)} dx}$.</li>  
+
+    </ol>
+    </div>
+
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>
+          Calcular las siguientes integrales definidas utilizando una substitución apropiada.
+          <ol class="three-column">
+            <li>$\displaystyle{\int_{0}^{\frac{3}{4}} \frac{\mathrm{sen}(\sqrt{1-x})}{\sqrt{1-x}} dx}$.</li> 
+            <li>$\displaystyle{\int_{0}^{4} x^{3}(x^{2} +1 )^{-\frac{1}{2}} dx} $.</li> 
+            <li>$\displaystyle{\int_{1}^{\sqrt{e}} \frac{\mathrm{sen}(\pi\mathrm{ln}(x))}{x} dx} $.</li>
+            <li>$\displaystyle{\int_{0}^{\frac{\pi}{2}} \mathrm{sen}^{4}(x) dx} $.</li>
+            <li>$\displaystyle{\int_{\frac{\pi}{4}}^{\pi} \mathrm{sen}^{5}(x) dx} $.</li>
+            <li>$\displaystyle{\int_{e}^{e^{2}} \frac{dx}{x \mathrm{ln}(x)} dx} $.</li>
+          </ol>
+      </p>
+
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Use las siguientes identidades:
+        $\mathrm{cos}(2\theta) = 2\mathrm{cos}^{2}(\theta) -1  = 1 - 2 \mathrm{sen}^{2}(\theta)$ y $\displaystyle{\mathrm{sen}(2\theta)= \mathrm{cos}\left(\frac{\pi}{2} - \theta\right)}$para evaluar las siguientes integrales:
+        <ol class="two-column">
+          <li>$\displaystyle{\int_{0}^{\frac{\pi}{2}} \sqrt{1 + \mathrm{cos}(x)} dx} $.</li>
+          <li>$\displaystyle{\int_{0}^{\frac{\pi}{2}} \sqrt{1 - \mathrm{sen}(x)} dx} $.</li>
+        </ol>
+      </p>
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Use las identidades para el coseno y el seno de la suma de angulos para establecer las siguientes identidades:
+        <ol>
+          <li>$\displaystyle{\mathrm{cos}(x) \mathrm{cos}(y) = \frac{1}{2} \left ( \mathrm{cos}(x-y) + \mathrm{cos}(x+y)\right)}$</li>
+          <li>$\displaystyle{\mathrm{sen}(x) \mathrm{sen}(y) = \frac{1}{2} \left ( \mathrm{cos}(x-y) - \mathrm{cos}(x+y)\right)}$</li>
+          <li>$\displaystyle{\mathrm{sen}(x) \mathrm{cos}(y) = \frac{1}{2} \left ( \mathrm{sen}(x+y) - \mathrm{sen}(x-y)\right)}$</li>
+        </ol>
+      </p>
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Use las identidades del ejercicio anterior para calcular las siguientes integrales:</p>
+        <ol class="three-column">
+          <li>$\displaystyle{\int \mathrm{cos}(ax)\mathrm{cos}(bx) dx} $.</li>
+          <li>$\displaystyle{\int \mathrm{sen}(ax)\mathrm{sen}(bx) dx} $.</li>
+          <li>$\displaystyle{\int \mathrm{sen}(ax)\mathrm{cos}(bx) dx} $.</li>
+        </ol>
+    </div>
+
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>
+          Si $m$ y $n$ son números enteros. Pueba que:
+      </p>
+      <ol>
+        <li>$\displaystyle{\int_{-\pi}^{\pi} \mathrm{cos}(mx)\mathrm{cos}(nx) dx} = 0 $ si $m \not= n$.</li>
+        <li>$\displaystyle{\int_{-\pi}^{\pi} \mathrm{sen}(mx)\mathrm{sen}(nx) dx} = 0 $ si $m \not= n$.</li>
+        <li>$\displaystyle{\int_{-\pi}^{\pi} \mathrm{sen}(mx)\mathrm{cos}(nx) dx} = 0 $ para cualesquiera $m$ y $n$.</li>
+      </ol>
+    </div>
+
+    
+
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>
+          Calcular las siguientes integrales  aplicando el método de integración por partes.
+      </p>
+
+    <ol class="three-column">
+      <li>$\displaystyle{\int x^{2}e^{x} dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{ln}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int  \mathrm{ln}^{2}(x^{20}) dx} $.</li> 
+      <li>$\displaystyle{\int e^{ax}\mathrm{cos}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x^{2}\mathrm{cos}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{sen}(\mathrm{ln}(x)) dx} $.</li> 
+      <li>$\displaystyle{\int \mathrm{cos}(\mathrm{ln}(x)) dx} $.</li> 
+      <li>$\displaystyle{\int (x^{2} - 2x) e^{ax} dx} $.</li> 
+      <li>$\displaystyle{\int x\mathrm{ln}^{3}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x^{3}\mathrm{ln}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x\mathrm{tan}^{-1}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x\mathrm{sen}^{-1}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x^{5}e^{-x^{2}} dx} $.</li>   
+      <li>$\displaystyle{\int \mathrm{tan}^{2}(x)\mathrm{sec}(x) dx} $.</li>
+      <li>$\displaystyle{\int e^{2x} \mathrm{sen}(3x) dx} $.</li>  
+      <li>$\displaystyle{\int xe^{\sqrt{x}}  dx} $.</li>
+      <li>$\displaystyle{\int \sqrt{x}\mathrm{sen}(\pi \sqrt{x})  dx} $.</li>  
+      <li>$\displaystyle{\int x \mathrm{sec}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int x \mathrm{sen}^{2}(x) dx} $.</li>
+      <li>$\displaystyle{\int \frac{\mathrm{ln}(\mathrm{ln}(x))}{x} dx} $.</li>  
+      <li>$\displaystyle{\int \sqrt{x}e^{\sqrt{x}}  dx} $.</li>
+      <li>$\displaystyle{\int \mathrm{cos}^{-1}(x) dx} $.</li>      
+      <li>$\displaystyle{\int x\mathrm{sec}^{-1}(x) dx} $.</li>
+      <li>$\displaystyle{\int (\mathrm{sen}^{-1}(x))^{2} dx} $.</li>
+      <li>$\displaystyle{\int x(\mathrm{tan}^{-1}(x))^{2} dx} $.</li>
+      <li>$\displaystyle{\int xe^{x}\mathrm{cos}(x)  dx} $.</li>    
+
+    </ol>
+    </div>
+
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Sean $a,b$ números reales no cero arbitrarios pero fijos. Prueba que se satisfacen las siguientes identidades:
+      </p>
+      <ol>
+      <li>$\displaystyle{\int e^{ax} \mathrm{cos}(bx)  dx = \frac{e^{ax} \left(  a \,\mathrm{cos}(bx) + b \,\mathrm{sen}(bx) \right) }{a^{2} + b^{2}} } + C$ </li>
+      <li>$\displaystyle{\int e^{ax} \mathrm{sen}(bx)  dx = \frac{e^{ax} \left(  a \,\mathrm{sen}(bx) - b\, \mathrm{cos}(bx) \right) }{a^{2} + b^{2}} } + C$ </li>
+      </ol>
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>
+          Calcular las siguientes integrales definidas utilizando el método de integración por partes.
+      </p>
+
+    <ol class="three-column">
+      <li>$\displaystyle{\int_{\frac{\pi}{6}}^{\frac{\pi}{2}} x\mathrm{csc}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int_{\frac{\pi}{6}}^{\frac{\pi}{4}} x\mathrm{sec}^{2}(x) dx} $.</li> 
+      <li>$\displaystyle{\int \frac{\mathrm{ln}(x)}{x^{2}} dx} $.</li> 
+      <li>$\displaystyle{\int_{0}^{1} xe^{\sqrt{x}}  dx} $.</li>
+      <li>$\displaystyle{\int_{\frac{1}{2}}^{1} \frac{\mathrm{sen}^{-1}(x)}{x^{2}}  dx} $.</li>
+      <li>$\displaystyle{\int_{1}^{e} \mathrm{sen}(\mathrm{ln}(x)) dx} $.</li>
+      <li>$\displaystyle{\int \sqrt{x}e^{\sqrt{x}}  dx} $.</li> 
+      <li>$\displaystyle{\int_{1}^{2} \mathrm{sec}^{-1}(x) dx} $.</li> 
+    </ol>
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>La función beta es muy importante en muchas ramas de las matemáticas,  se define como:
+        $$B(\alpha,\beta) = \int_{0}^{1} x^{\alpha - 1} (1-x)^{\beta -1} dx$$
+        con la condición de que $\alpha \geq 1$y $\beta \geq 1$.
+
+      </p>
+
+      <p>
+        <ol>
+          <li>Utliza un cambio de variable para probar que:
+            $$B(\alpha,\beta)  = B(\beta, \alpha) $$ 
+          </li>
+          <li>Utilizando integración por partes de muestra que:
+            $$B(\alpha,\beta)  = \frac{\alpha - 1}{\beta} B(\alpha - 1, \beta +1) = \frac{\beta - 1}{\alpha} B(\alpha + 1, \beta -1)$$
+          </li>
+          <li>Luego, si $\alpha = n$ y $\beta = m$ donde $m$ y $n$ son números enteros positivos, prueba que 
+            $$B(n,m)  = \frac{(n-1)! (m-1)!}{ (n+m -1)!}$$
+          </li>
+        </ol>
+      </p>
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Si $f$ es dos veces diferenciable en $[a,b]$ y $f(a)=f(b) = 0$, pruebe que 
+        $$\displaystyle{\int_{a}^{b}(x-a) (x-b) f^{''}(x) dx = -2 \int_{a}^{b} f(x) dx}$$
+      </p>
+    </div>
+
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Si $f$ y $g$ son  dos funciones que tienen derivadas contiuas en  $[a,b]$ y si  $f(a)=f(b) = g(a)  = g(b) = 0$, pruebe que 
+        $$\displaystyle{\int_{a}^{b} f(x)g^{''}(x) dx = \int_{a}^{b} f^{''}(x) g(x) dx}$$
+      </p>
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Sean $a$ un  número real no cero arbitrario pero fijo. Prueba  la siguiente identidad:
+      </p>
+      $$\displaystyle{\int \mathrm{ln}(ax + b)   dx = \frac{1}{a} (ax +b) \mathrm{ln}(ax +b) -x + C } $$
+    </div>
+
+    
+    <div class="ejercicio-box">
+      <h2 class="number-title"> Ejercicio</h2> 
+      <p>Sea $n \in \mathbb{N}$. Prueba  la siguiente identidad:
+      </p>
+      $$\displaystyle{\int \mathrm{ln}^{n}(x)   dx = x\mathrm{ln}^{n}(x) - n \int \mathrm{ln}^{n-1}(x) dx } $$
+    </div>
+
+</body>

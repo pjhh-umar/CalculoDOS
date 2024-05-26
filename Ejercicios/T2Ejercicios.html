@@ -1,0 +1,757 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <!--<script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>-->
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 1 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 1 cardCounter ;
+        }
+      </style>
+  
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+        <h1> Cálculo DOS  </h1>
+       <nav class="top-nav">
+        <ul>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Informacion_General.html"> Información general </a> </li>
+          <!-- <li> <a href="https://pablojhh.github.io/CalculoDOS/Notas.html"> Notas  </a> </li> -->
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Ejercicios.html"> Ejercicios  </a> </li>
+          <li> <a href="https://pablojhh.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+        </ul>
+       </nav>
+       <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Ejercicios propuestos segundo parcial   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    <h1 class="number-title flexbox"> Ejercicios propuestos segundo parcial </h1> 
+    
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Sea $A$ un subconjunto no vacio de números reales acotado, i.e. existe $M>0$ tal que $|a| \leq M$ 
+        para todo $a \in A $. Si $B$, es un subconjunto no vacio de $A$, prueba que
+      </p>          
+        <ol class="two-column">
+          <li>$\sup(B) \leq \sup(A)$</li><br>
+          <li>$\inf(A) \leq \inf(B)$</li>
+        </ol> 
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Sea  $f:[a,b]\to \mathbb{R}$ una función acotada  y $P:=\{x_0=a,x_{1},x_{2},\ldots,x_{n}=b\}$  una partición de $[a,b]$. Prueba que 
+        $$ \underline{S}(f,P)\leq \overline{S}(f,P)$$
+      </p>          
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Sea  $f:[0,b]\to \mathbb{R}$ la función definida como: $f(x):=x^{2}$ para cada $n\in \mathbb{N}$ sea 
+        $P_{n}$ la partición homogenea de $[0,b]$ de longitud $n$.
+        <ol>
+          <li>Prueba que la sucesión $\left( \overline{S}(f,P_{n}) \right)_{n=1}^{\infty}$ es una sucesión monotona creciente</li><br>
+          <li>Prueba que la sucesión $\left( \underline{S}(f,P_{n}) \right)_{n=1}^{\infty}$ es una sucesión monotona decreciente</li><br>
+        </ol>
+      </p>          
+    </div>
+
+    
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+        <p>Sea  $f:[0,1]\to \mathbb{R}$ la función definida como: $f(x):=x^{2}$. Calcula la 
+          suma superior e inferior de Riemann de la función
+          $f(x)=x^{2}$  con respecto a la partición 
+          $\displaystyle{P:=\left\{0, \frac{1}{4}, \frac{1}{2}, \frac{3}{4}, 1\right \}}$ del 
+          intervalo $[0,1]$. 
+         
+        </p>          
+      </div>
+    
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+        <p>Sean  $f:[0,1]\to \mathbb{R}$ la función definida como: $f(x):=x$ y $P:=\left\{x_0=0,x_{1},x_{2},\ldots,x_{n}=1\right\}$
+          una partición del intervalo $[0,1]$. Calcula la suma superior e inferior de Riemann de la función
+          $f(x)=x$ con respecto a la partición $\displaystyle{P}$ dada.
+        </p>          
+      </div>
+        
+    <div class="ejercicio-box"> 
+      <h2 class="number-title"> Ejercicio</h2>
+      <p>
+          Este ejercicio da otra prueba de que, para la función 
+          \(f:[0,b]\to \mathbb{R}\), $f(x)=x^2$, 
+          $$\lim_{n\to \infty} \overline{S}(f,P_n)=
+          \lim_{n\to \infty} \underline{S}(f,P_n)=\frac{b^3}{3}$$
+      </p>
+          <ol>
+              <li> Prueba por inducción sobre $n$ que:
+                  $$
+                  \sum_{i=1}^n i^2=\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}
+                  $$
+                  <b>Sugerencia:</b> Prueba que $k^3-(k-1)^3=3k^2-3k+1$
+              </li><br>
+              <li>
+                  Usando el inciso anterior prueba que 
+                  $$
+                 \lim_n  \overline{S}_n(f)=\lim_{n}\underline{S}_n(f) =\frac{b^3}{3}
+                  $$
+              </li>
+    </div>
+        
+
+
+    <div class="ejercicio-box"> 
+      <h2 class="number-title" id="Ejer:SumasSupInfCubica"> Ejercicio</h2> 
+        <p>
+            Este ejercicio  es similar al anterior pero para 
+            la función \(f:[0,b]\to \mathbb{R}\) dada por $f(x)=x^3$.  
+        </p>
+    <ol>
+        <li>
+            Prueba  por inducción:
+            $$\sum_{i=1}^n i^3= \frac{n^4}{4}+\frac{n^3}{2}+\frac{n^2}{4}$$
+        </li>
+        <li>
+            Si $P_n$ es la partición homogenea de \([0,b]\) usa el inciso anterior para probar 
+            $$\lim_{n}\underline{S}(f,P_n)=\lim_n\overline{S}(f,P_n)=\frac{b^4}{4}$$
+        </li>
+    </ol>
+    <!-- <p>
+        Este ejercicio se interpreta como que el area bajo la curva \(y=x^3\), de \(0\) a \(b\)
+        es \(\displaystyle{\frac{b^4}{4}}\).
+    </p> -->
+      <button class="respButton hvr-grow "> Solución  </button>
+        <div class="resp-box flexbox">
+          <div class="flexbox">
+            <a href="https://youtu.be/HVk1gIwSvVU" target="_blank" > Video </a>
+          </div>
+        </div>
+    </div>
+
+   
+    <div class="ejercicio-box"> 
+      <h2 class="number-title"> Ejercicio</h2>
+      <p>
+          Las funciones características tienen muchas propiedades que reflejan 
+          propiedades de conjuntos. En este ejercicio se presentan  algunas de ellas.
+          Sean \(A,B\subseteq \mathbb{R}\).
+      </p>
+      <ol>
+          <li> Prueba que \(\chi_A(x)=\chi_B(x)\), para toda \(x\in \mathbb{R}\)  si y sólo si \(A=B\).
+          </li><br>
+          <li> Si $A\cap B = \emptyset$ entonces la función característica de la unión es 
+              la suma de las funciones características, i.e. 
+              $$\chi_A(x)+\chi_B(x)=\chi_{A\cup B}(x),$$ para toda \(x\in \mathbb{R}\).
+          </li><br>
+          <li> Prueba que la función característica de la intersección es 
+              el producto de las funciones características, i.e. 
+              $$\chi_{A\cap B}(x)=(\chi_A\chi_B)(x)=\chi_A(x)\chi_B(x),$$ para toda \(x\in \mathbb{R}\)..
+          </li><br>
+          <li> La diferencia simétrica de dos conjuntos se define como 
+              \(A\triangle B=(A\setminus B) \cup (B\setminus A)\). Prueba que 
+              \[
+              |\chi_A(x)-\chi_B(x)|\leq \chi_{A\triangle B}(x)
+              \]
+              para toda \(x\in \mathbb{R}\).
+          </li>
+      </ol>
+      <button class="respButton hvr-grow "> Solución  </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">
+          <a href="https://youtu.be/65HXTsImGPc" target="_blank" > Video </a>
+        </div>
+      </div> 
+  </div>
+  
+  
+  <div class="ejercicio-box"> 
+      <h2 class="number-title"> Ejercicio</h2>
+      <p> 
+          Sea $P=\{ x_0< x_1<  \cdots< x_{n-1}< x_n  \}$ una partición de $[a,b]$ y sean 
+          $s_1,\dots, s_n \in \mathbb{R}$ fijos y arbitrarios. Demuestra que
+          $$
+          s(x):=\sum_{i=1}^n s_i \chi_{[x_{i-1}, x_i)}(x)
+          $$
+          es una función escalonada.
+      </p>
+  </div>
+
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2>
+        <p>
+            Realiza un bosquejo de las gráficas de las siguientes funciones escalonadas:
+        </p>
+            <ol class="two-column">
+            <li>$s_{1}(x) := 2\chi_{[0,1)}(x) + 4\chi_{[1,2)}(x).$ </li><br>
+            <li>$s_{2}(x) := 2\chi_{[0,1)}(x) + 4\chi_{[1/2,2)}(x).$ </li><br>
+            <li>$s_{3}(x) := 5\chi_{[-1,0)}(x) + 2\chi_{[0,1)}(x) - 3\chi_{[1,2)}(x) + \chi_{[2,3)}(x).$</li><br>
+            <li>$s_{4}(x) := 3\chi_{[0,1)}(x) - 2 \chi_{[1/3,1/2)}(x)+ 4\chi_{[1/2, 2)}(x).$</li><br>
+        </ol> 
+        </div>
+
+      <!-- <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2>
+        <p>Demuestra que toda función escalonada $s:[a,b]\to \mathbb{R}$ 
+            se puede escribir de la forma
+            $$
+            s(x)=\sum_{j=1}^m s_j \chi_{A_j}(x)
+            $$
+            donde $A_j \subseteq [a,b]$ satisfacen: 
+            $\cup_{j=1}^m A_j=[a,b]$ y si $j_1\ne j_2$, $A_{j_1}\cap A_{j_2}=\emptyset$.
+        </p>
+        
+     </div>
+
+     <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>
+      </p>          
+    </div> -->
+    
+          
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2> 
+        <p>
+            Calcula la siguientes integrales:
+        </p>
+        <p>
+          <ol class="three-column">
+          <li>$\displaystyle{\int_{-1}^3 \lfloor x \rfloor dx}$</li><br>
+          <li>$\displaystyle{\int_{-1}^3 \lfloor x+1 \rfloor dx}$</li><br>
+          <li>$\displaystyle{\int_{-2}^3 \lfloor 2 x \rfloor dx}$</li><br>
+          <li>$\displaystyle{\int_{-2}^3 \lfloor x/2 \rfloor dx}$</li><br>
+          <li>$\displaystyle{\int_{-1}^3 \lfloor x+\frac{1}{2} \rfloor dx}$</li><br>
+          <li>$\displaystyle{\int_0^9 \lfloor \sqrt{t} \rfloor dt}$</li><br>
+          </ol>
+        </p>
+        </div>
+
+                
+        <div class="ejercicio-box"> 
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Demuestra que para todo número natural $n$ se verifica que:
+
+              $$\int_0^{n^2} \lfloor \sqrt{t} \rfloor dt=n(n-1)(4n+1)/6.$$
+          </p>
+          <button class="respButton hvr-grow "> Demostración  </button>
+          <div class="resp-box flexbox">
+            <div class="flexbox">
+              <a href="https://youtu.be/QNGlSYgcSBU" target="_blank" > Video </a>
+            </div>
+          </div>
+        </div>
+                
+                
+        <div class="ejercicio-box"><h2 class="number-title" id="Ejer:LemaAditividadIntervalosEscalonadas"> Ejercicio</h2> 
+          <p>Sea $s:[a,b] \to \mathbb{R}$ una función escalonada y $c\in (a,b)$. Demuestra:
+            $$ \int_a^b s(x) dx = \int_a^c s(x) dx + \int_c^b s(x) dx $$
+          </p>
+        </div>
+
+                
+        <div class="ejercicio-box"> 
+          <h2 class="number-title" > Ejercicio</h2> 
+          <p> Supongamos que $s, \tilde{s}:[a,b] \to \mathbb{R}$ son funciones escalonadas 
+              y que $s = \tilde{s}$, excepto en un número finito de puntos. Prueba que
+              
+              $$\displaystyle{\int_{a}^{b} s(x) dx=\int_{a}^{b}\tilde{s}(x) dx}$$.
+          </p>
+          <p><b>Sugerencia:</b> Usar el <a href="#Ejer:LemaAditividadIntervalosEscalonadas"> Ejercicio 2.13 </a> 
+              e inducción sobre el número de puntos donde son distintos.
+          </p>
+          <button class="respButton hvr-grow "> Demostración  </button>
+          <div class="resp-box flexbox">
+            <div class="flexbox">
+              <a href="https://youtu.be/zhBTqGOFvWI" target="_blank" > Video </a>
+            </div>
+          </div>
+        </div>
+
+                
+        <div class="ejercicio-box"> <h2 class="number-title" id="Ejer:LinealidadMultiplesIntervalos"> Ejercicio</h2>
+          <p>
+              Sea $s:[a,b]\to \mathbb{R}$ una función escalonada. 
+              Si $Q=\{y_j \}_{j=0}^m$ es una partición arbitraria de $[a,b]$, 
+              demuestra:
+              $$
+              \int_a^b s(x)dx =\sum_{j=1}^m \int_{y_{j-1}}^{y_j}s(x)dx.
+              $$
+          </p>
+          <p> <b>Sugerencia</b>: usa inducción sobre la longitud de la partición 
+              y el ejercicio  <a href="#Ejer:LemaAditividadIntervalosEscalonadas">Ejercicio 2.13.</a>
+          </p>
+        </div>
+
+
+                
+        <div class="ejercicio-box"> 
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Dibuja la gráfica de la  función 
+              $f(x)=\lfloor 2x  \rfloor + \lfloor 3x \rfloor$, $0\leq x \leq 2$ 
+              y escribe a $f$ de la forma
+              $$
+              f(x)=\sum_{i=1}^n \alpha_i \chi_{[x_{i-1}, x_i)}(x)
+              $$
+              donde $\{x_i\}_{i=0}^n$ es una partición de $[0,2]$.
+          </p>
+        </div>
+
+              
+      <div class="ejercicio-box"> 
+        <h2 class="number-title" id="Ejer:LemaUnionParticionesEscalonadas"> Ejercicio</h2> 
+        <p>
+            Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas. Por $P_s$ y $P_t$ denotamos 
+            las particiones asociadas a  $s$ y $t$, respectivamente. 
+            Denota $Q=P_t\vee P_s=\{ z_k\}_{k=0}^p$. Demuestra que, para todo $k=1,\dots, p$, 
+            $s$ es constante en $(z_{k-1}, z_k)$ y t es constante en $(z_{k-1}, z_k)$.
+        </p>
+        <button class="respButton hvr-grow "> Demostración  </button>
+        <div class="resp-box flexbox">
+          <div class="flexbox">
+            <a href="https://youtu.be/fjhj_WxcVg8" target="_blank" > Video </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ejercicio-box">
+        <h2 class="number-title" id="Ejer:MonotoniaIntegralEscalonadas"> Ejercicio</h2>   
+        <p>Sean $s,t : [a,b]\to \mathbb{R}$ dos funciones escalondas con $s(x)\leq t(x)$
+            para todo \(x\in [a,b]\), excepto una cantidad finita de puntos. Demuestra que 
+            $$\int_a^b s(x)dx\leq \int_a^b t(x)dx.$$
+        </p> 
+       
+      </div>
+
+
+            
+      <div class="ejercicio-box"> 
+        <h2 class="number-title" id="Ejer:EscalonadasEspacioVectorial"> Ejercicio</h2> 
+            <p>
+                Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas. Demuestra:
+            </p>
+
+        <ol>
+            <li>La función suma, $s+t$, es otra vez una función escalonada.</li><br>
+            <li>Si $\alpha$ es una constante, la función $\alpha s$, es otra vez  
+                una función escalonada.<br></li> 
+        </ol>
+        <p><b>Sugerencia:</b> usa el <a href="#Ejer:LemaUnionParticionesEscalonadas">Ejercicio 2.17.</a> 
+        </p>
+
+      </div>
+
+            
+      <div class="ejercicio-box"> 
+        <h2 class="number-title" id="Ejer:LinealidadEscalonadas"> Ejercicio</h2> 
+        <p>
+            Sean $s,t:[a,b] \to \mathbb{R}$ dos funciones 
+            escalonadas y $\alpha \in \mathbb{R}$  una constante. Prueba:
+            $$
+            \int_a^b  (s+\alpha t )(x)dx =  \int_a^b s(x)dx+ \alpha \int_a^b t(x) dx
+            $$
+        </p>
+        <p>
+           A esta propiedad se le  conoce como <b>linealidad de la integral</b>.
+        </p>
+      </div>
+
+            
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2>  
+        <p>
+            Calcula $\displaystyle{\int_{-1}^3 \lfloor x \rfloor +  \lfloor x+\frac{1}{2} \rfloor  dx}$.
+        </p>
+      </div>
+
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2> 
+        <p>
+            Sean $s_1,\cdots, s_m:[a,b]\to \mathbb{R}$ funciones escalonadas. Demuestra
+            $$
+            \int_a^b \sum_{k=1}^m s_k(x)dx=\sum_{k=1}^m \int_a^b s_k(x)dx.
+            $$
+        </p>
+        <p>
+            <b>Sugerencia:</b> Usa la linealidad e inducción sobre el número de sumandos.
+        </p>
+        
+      </div>
+
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+        <p>Sea  $k\in \mathbb{N}$ arbitrario pero fijo y considera la función $s_k:[0,1] \to \mathbb{R}$ dada por $s_k(x)=\lfloor kx\rfloor$.
+        </p>
+      <ol>
+        <li>Demuestra que $s_k(x)=\displaystyle{\sum_{j=1}^k (j-1)\chi_{\left[\frac{j-1}{k}, \frac{j}{k}\right)}(x)}$, para \(x\in [0,1)\).</li><br> 
+        <li>Demuestra $\displaystyle{\int_0^1 s_k(x)dx=\frac{k-1}{2}}$.</li> <br>
+
+        <li>Demuestra
+            $$
+            \int_0^1 \sum_{k=1}^n \lfloor kx \rfloor dx=\frac{(n-1)n}{4}.
+            $$
+        </li> 
+      </ol>
+      </div>
+
+            
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2> 
+        <p>
+            Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas.
+            <ol>
+                <li>Prueba que  la función multiplicación, $st$, es escalonada.</li><br>
+                <li>Si $s(x)\not=0$, para toda $x$, demuestra que $\displaystyle{\frac{1}{s}}$ es una función escalonada.</li><br>
+            </ol>
+        </p>
+        <button class="respButton hvr-grow "> Demostración  </button>
+        <div class="resp-box flexbox">
+          <div class="flexbox">
+            <a href="https://youtu.be/meq6Mp0bttM" target="_blank" > Video </a>
+          </div>
+        </div>
+      </div>
+
+            
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2> 
+        <ol>
+            <li>    
+                Da un ejemplo de funciones escalonadas, \(s,t:[a,b]\to \mathbb{R}\), que muestre
+                $$
+                \int_a^b (st)(x) dx\not= \int_a^b s(x)dx \int_a^b t(x)dx
+                $$
+            </li>
+            <li>
+                Da un ejemplo de una función escalonada,
+                \(s:[a,b]\to \mathbb{R}\), tal que  \(s(x)\ne 0\) para toda 
+                \(x \in [a,b]\) y tal que 
+                \[
+                    \int_a^b \left(\frac{1}{s}\right)(x)dx  \ne \frac{1}{\displaystyle{\int_a^b s(x)dx}}
+                \]
+            </li>
+        </ol>
+
+      </div>
+
+      <div class="ejercicio-box"> 
+        <h2 class="number-title"> Ejercicio</h2> 
+            <p>Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas. Demuestra:
+            </p>
+              <ol><li>La función $\max\{s,t\}$ es una función escalonada.</li><br>
+              <li>La función $\min\{s,t\}$ es una función escalonada.</li><br> 
+            </ol>
+      </div>
+
+            
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>  
+        <p>Sea $s:[a,b]\to \mathbb{R}$ una función escalonada y $f:[c,d] \to \mathbb{R}$ una función 
+          arbitraria pero fija.
+        </p>
+        <ol>
+          <li>Si \(s(x)\in [c,d]\), para todo \(x\in [a,b]\). Prueba que 
+            la composición $f\circ s$, es una función escalonada.</li><br>
+          <li> Da un ejemplo que muestre que no siempre la composición $s\circ f$ es una función escalonada.</li><br< 
+          </ol>
+      </div>
+
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>  
+        <p>Supongamos que las funciones $f(x) := \sqrt{1+x^2}$ y $g(x) := \sqrt{1+x}$  es una funcion Riemann integrable en $[0,1]$. Prueba que se satisface la siguiente desigualdad:
+        $$\int_0^1\sqrt{1+x^2}dx\leq \int_0^1 \sqrt{1+x}dx.$$
+      </div>
+
+        
+      <div class="ejercicio-box"> <h2 class="number-title" id="Ejer:integral_x_al_cuadrado"> Ejercicio</h2>
+        <p>
+            Considera la parábola \(f:[0,b]\to \mathbb{R}\), \(f(x)=x^2\) ,donde \(b>0\).
+        </p>
+        <ol>
+            <li>
+                Prueba que existen funciones escalonadas \(s_n,t_n:[0,b]\to \mathbb{R}\)
+                tales que:
+                <p>
+                  <ul>
+                      <li>$\displaystyle{s_n(x)\leq f(x)\leq t_n(x), \forall x\in [0,b]}$,</li><br>
+                      <li>$\displaystyle{\int_0^b t_n(x)dx - \int_0^b s_n(x)dx  \leq \frac{b^3}{n}}$,</li><br>
+                      <li>$\displaystyle{\int_0^b s_n(x)dx \leq \frac{b^3}{3} \leq \int_0^b t_n(x)dx}$ </li>
+                  </ul>
+                </p>
+            </li><br>
+            <li>
+                Usa el criterio de Cauchy para concluir que \(f\) es integrable en \([a,b]\).
+            </li><br>
+            <li>
+                Ya que sabemos que \(f\) es integrable podemos tomar \(\displaystyle{\int_0^bfdx}\) y usar 
+                monotonía para obtener 
+                \[
+                    \int_0^b s_n(x)dx \leq \int_0^b f(x)dx \leq \int_0^b t_n(x)dx 
+                \]
+                Usa las desigualdades del inciso 1 para concluir
+                \[
+                    \int_0^b x^2 dx =\frac{b^3}{3}
+                \]
+            </li><br>
+        <button class="respButton hvr-grow "> Demostración  </button>
+          <div class="resp-box flexbox">
+            <div class="flexbox">
+              <a href="https://youtu.be/qHy2XeG2Dqw" target="_blank" > Video </a>
+            </div>
+          </div>
+    </div>
+
+ 
+      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+        <p>De manera similar al <a href="./T2Ejercicios.html#Ejer:integral_x_al_cuadrado">Ejercicio 2.29</a>  y utilizando el <a href="./T2Ejercicios.html#Ejer:SumasSupInfCubica">Ejercicio 2.7</a> 
+            Para $b>0$ prueba que: 
+            \[
+                \int_0^b x^3dx =\frac{b^4}{4}.
+            \]
+          </p>
+      </div>
+
+      <div class="ejercicio-box">
+        <h2 class="number-title" id="Ejer:SacaEscalares"> Ejercicio</h2> 
+    
+        <p>Sea $f:[a,b] \to \mathbb{R}$ integrable y $\alpha\in \mathbb{R}$, un escalar fijo y arbitrario. Entonces la función \(\alpha f\colon \to \mathbb{R}\) es integrable y 
+            \[
+              \int_a^b \alpha f(x)dx=\alpha\int_a^bf(x)dx
+            \]
+        </p>
+        <p>Si $\alpha =0$ no hay mucho que hacer. Supongamos que $\alpha \not= 0$.</p>
+        <p> Fija $\varepsilon >0$. 
+        </p>
+        <ol>
+            <li>
+                Demuestra que existen funciones escalonadas $s_f,t_f :[a,b] \to \mathbb{R}$ tales que
+                $s_f \leq f \leq t_f$ y tal que
+                $$
+                \int_a^b t_f(x)dx -\int_a^bs_f(x)dx < \frac{\varepsilon}{|\alpha|}.
+                $$
+            </li><br>
+        
+            <li>Si $\alpha >0$ define $s:=\alpha s_f$, $t:=\alpha t_f$; si $\alpha < 0$ define 
+                $s=\alpha t_f$, $t=\alpha s_f$. 
+                Demuestra que $s$ y $t$ son funciones escalonadas, que $s\leq \alpha f \leq t$ y que
+                \begin{equation}\label{Eqn:SacaEscalares1}
+                \int_a^b t(x)dx -\int_a^b s(x)dx  < \varepsilon.
+                \end{equation}
+            </li><br>
+            <li>
+                Usa el inciso anterior y el criterio de Cauchy 
+                para concluir que la función 
+                $\alpha f$ es integrable.
+            </li><br>
+        
+            <li>
+                Usando la monotonía de la integral demuestra que:
+                \begin{equation}\label{Eqn:SacaEscalares2}
+                \int_a^b s(x)dx \leq \int_a^b \alpha f(x)dx \leq \int_a^b t(x)dx.
+                \end{equation}
+            </li><br>
+        
+            <li>
+                Recuerda que, por definición de $t_f$ y $s_f$:
+                $$
+                \int_a^b s_f(x)dx \leq \int_a^b f(x)dx \leq \int_a^b t_f(x)dx.
+                $$
+                Multiplica las desigualdades anteriores por $\alpha$  y usa la linealidad de la 
+                integral de las
+                funciones escalonadas para demostrar que:
+        
+                \begin{equation}\label{Eqn:SacaEscalares3}
+                \int_a^b s(x)dx \leq \alpha \int_a^b f(x)dx \leq \int_a^b t(x)dx
+                \end{equation}
+            </li><br>
+
+            <li>
+                Usando \eqref{Eqn:SacaEscalares1}, \eqref{Eqn:SacaEscalares2} y 
+                \eqref{Eqn:SacaEscalares3} demuestra que
+                $$
+                \left| \alpha \int_a^b f(x)dx -\int_a^b \alpha f(x)dx \right| <\varepsilon.
+                $$
+            </li><br>
+
+            <li>
+                Ya que $\varepsilon$ es arbitrario, concluye del inciso anterior que
+                $$
+                \int_a^b \alpha f(x)dx=\alpha\int_a^b f(x)dx.
+                $$
+            </li> 
+        
+        </ol>
+        </div>
+                
+        <div class="ejercicio-box">
+          <h2 class="number-title" id="Ejer:CoroLinealidadIntervalos"> Ejercicio</h2> 
+          <p>
+              Sea $f:[a,b] \to \mathbb{R}$ integrable. Sea $c\in (a,b)$ fijo y arbitrario. Demuestra
+              $$
+              \int_c^bf(x)dx=\int_a^b f(x)dx-\int_a^cf(x)dx.
+              $$
+              <b>Sugerencia:</b> Usa la linealidad respecto a intervalos
+          </p>
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title" id="Ejer:CoroLinealidadIntervalos"> Ejercicio</h2> 
+          <p>Usando el ejercicio anterior  resulve los siguientes ejercicios.
+              <ol>
+                  <li>
+                      Calcula $\displaystyle{\int_1^2 x^2 dx}$.
+                  </li>
+                  <li>
+                      Encuentra un número \(b>2\) tal que $\displaystyle{\int_1^2x^2dx=\int_2^b x^2dx}.$
+                  </li>
+              </ol> 
+          </p>
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Supon que $f:[0,\infty) \to \mathbb{R}$ es una función que satisface 
+              $\int_0^b f(x)dx=3b^2+2b+1$, para todo
+              $b>0$. Calcula
+              <ol class="two-column">
+                  <li>$\displaystyle{\int_0^5 f(x)dx.}$</li> 
+                  <li>$\displaystyle{\int_1^7 f(x)dx.}$</li> 
+              </ol>
+          </p>
+
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Define la función $F(x,y)=2-x+3x^2y+x^2y^3$, $x,y\in \mathbb{R}$. 
+              Calcula las siguientes integrales:
+          </p>
+        <ol class="three-column">
+          <li>$\displaystyle{\int_0^1 F(x,y)dx}$.</li> 
+          <li>$\displaystyle{\int_0^2 F(x,y)dx}$.</li> 
+          <li>$\displaystyle{\int_1^2 F(x,y)dx}$ </li>
+          <li>$\displaystyle{\int_0^1 F(x,y)dy}$</li>
+          <li>$\displaystyle{\int_0^2 F(x,y)dy}$.</li> 
+          <li>$\displaystyle{\int_1^2 F(x,y)dy}$ </li>
+        </ol>
+          <p>
+              En este ejercicio puedes usar las fórmulas 
+              \begin{eqnarray}
+                  \int_0^b xdx = \frac{b^2}{2} \\
+                  \int_0^b x^2dx = \frac{b^3}{3}\\
+                  \int_0^b x^3dx = \frac{b^4}{4}
+              \end{eqnarray}
+          </p>
+
+
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Sea $s:[c,d]\to \mathbb{R}$ escalonada. Define $\tilde{s}:[-d,-c] 
+              \to \mathbb{R}$ por $\tilde{s}(x)=s(-x)$. Demuestra: 
+              $$
+              \int_{-d}^{-c}\tilde{s}(x)dx=\int_{c}^d s(x)dx.
+              $$
+          </p>
+          
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title"> Ejercicio</h2> 
+          <p>
+              Sea $f:[c,d]\to \mathbb{R}$ una función integrable. 
+              Define $\tilde{f}:[-d,-c]\to \mathbb{R}$  por
+              $\tilde{f}(x)=f(-x)$ (la función reflejada). Demuestra que $\tilde{f}$ es integrable y que:
+          
+              $$
+              \int_{-d}^{-c}\tilde{f}(x)dx= \int_c^d f(x)dx
+              $$
+          </p>
+        </div>
+
+        <div class="ejercicio-box">
+          <h2 class="number-title"id="Ejer:IntegralesPotencias1"> Ejercicio</h2>
+          <p>Sea  $k \in \mathbb{N}$ arbitrario pero fijo y $b>0$. Este ejercicio ayuda a calcular        $\displaystyle{\int_{0}^{b} x^{k} dx}$ 
+          </p> 
+      
+          <ol>
+              <li>Demuestra por inducción sobre $n\in \mathbb{N}$ que para todo  $n\geq 1$:
+              $$
+              \sum_{i=0}^{n-1}i^k \leq \frac{n^{k+1}}{k+1} \leq \sum_{i=1}^n i^k
+              $$
+          </li> 
+      
+          <li>
+              Usa el inciso anterior y el resultado visto en clase para concluir que para toda $b>0$ se satisface: 
+              $$
+                  \int_0^b x^k dx = \frac{b^{k+1}}{k+1},
+              $$
+              
+          </li> 
+          </ol>
+        </div>
+
+
+
+      
+
+
+</body>
