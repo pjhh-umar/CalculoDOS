@@ -1,19 +1,20 @@
+
 <!DOCTYPE html PUBLIC >
 
 <html lang="es">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Following part is mathjax, for latex-->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- This part is for jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 
     <!-- This part is to load main.js -->
     <script type="text/javascript" src="../main.js"></script>
 
 
+    
 
 
     <!-- Next part is for new coomands -->
@@ -22,60 +23,80 @@
         tex: {
           macros: {
             sen: "\\operatorname{sen}",
-            seg: ["\\overrightarrow{#1}", 1]
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
           },
-          tags: "ams" /* this part is for numbered equations */
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
         }
       };
     </script>
 
-    <!-- This part is for using single $ for latex input, instead of \(\) -->
-    <script>
-        MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-        svg: {
-            fontCache: 'global'
-        }
-    };
-    </script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
+      }
 
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
 
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
 
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
     <!-- CSS -->
 
     <link rel="stylesheet" , href="../style.css" />
-
-    <!-- This part restart counter of cards to start at n+1 -->
-    <style>
-        body.number-title{
-          counter-reset: sectionCounter 3 cardCounter ;
-        }
-        h1.number-title{
-          counter-reset: sectionCounter 3 cardCounter ;
-        }
-      </style>
-  
     <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Cálculo I</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría</div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+      
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
 
+      
+        </header>
 
-    <header class="main-header">
-      <h1> Cálculo DOS  </h1>
         <nav class="top-nav">
           <ul>
             <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Informacion_General.html"> Información general </a> </li>
-            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Notas.html"> Notas  </a> </li> -->
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Ejercicios.html"> Ejercicios  </a> </li>
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Informacion_General.html"> Información</a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Notas.html"> Notas  </a> </li>
+            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Quizes.html"> Quizes  </a> </li>-->
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Ejercicios.html">Ejercicios</a></li> 
+            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Examenes.html"> Archivos </a> </li> -->
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Links.html"> Links</a> </li>
           </ul>
-        </nav>
-       <!-- 
-        <nav class="small-nav" align=right>
-          <button onclick="myFunction()">Claro/Obscuro 
-        </nav> 
-      -->
+          </nav>
+        
 
       </header>
 
@@ -86,12 +107,11 @@
 
 
 
-  <body class="fondo-body" >
-    <h1 class="number-title flexbox"> Ejercicios propuestos ordinario parcial </h1>   
+  <body class="fondo-body" ><h1 class="page-title-practica">  Ejercicios propuestos ordinario </h1>   
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Calcular las siguientes integrales indefinidas utilizando una substitución apropiada.
       </p>
@@ -124,8 +144,8 @@
     </ol>
     </div>
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Calcular las siguientes integrales definidas utilizando una substitución apropiada.
           <ol class="three-column">
@@ -141,8 +161,8 @@
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Use las siguientes identidades:
         $\mathrm{cos}(2\theta) = 2\mathrm{cos}^{2}(\theta) -1  = 1 - 2 \mathrm{sen}^{2}(\theta)$ y $\displaystyle{\mathrm{sen}(2\theta)= \mathrm{cos}\left(\frac{\pi}{2} - \theta\right)}$para evaluar las siguientes integrales:
         <ol class="two-column">
@@ -153,8 +173,8 @@
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Use las identidades para el coseno y el seno de la suma de angulos para establecer las siguientes identidades:
         <ol>
           <li>$\displaystyle{\mathrm{cos}(x) \mathrm{cos}(y) = \frac{1}{2} \left ( \mathrm{cos}(x-y) + \mathrm{cos}(x+y)\right)}$</li>
@@ -165,8 +185,8 @@
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Use las identidades del ejercicio anterior para calcular las siguientes integrales:</p>
         <ol class="three-column">
           <li>$\displaystyle{\int \mathrm{cos}(ax)\mathrm{cos}(bx) dx} $.</li>
@@ -175,8 +195,8 @@
         </ol>
     </div>
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Si $m$ y $n$ son números enteros. Pueba que:
       </p>
@@ -189,8 +209,8 @@
 
     
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Calcular las siguientes integrales  aplicando el método de integración por partes.
       </p>
@@ -226,8 +246,8 @@
     </ol>
     </div>
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Sean $a,b$ números reales no cero arbitrarios pero fijos. Prueba que se satisfacen las siguientes identidades:
       </p>
       <ol>
@@ -237,8 +257,8 @@
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Calcular las siguientes integrales definidas utilizando el método de integración por partes.
       </p>
@@ -255,7 +275,7 @@
     </ol>
     </div>
 
-    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+    <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
       <p>La función beta es muy importante en muchas ramas de las matemáticas,  se define como:
         $$B(\alpha,\beta) = \int_{0}^{1} x^{\alpha - 1} (1-x)^{\beta -1} dx$$
         con la condición de que $\alpha \geq 1$y $\beta \geq 1$.
@@ -278,31 +298,31 @@
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Si $f$ es dos veces diferenciable en $[a,b]$ y $f(a)=f(b) = 0$, pruebe que 
         $$\displaystyle{\int_{a}^{b}(x-a) (x-b) f^{''}(x) dx = -2 \int_{a}^{b} f(x) dx}$$
       </p>
     </div>
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Si $f$ y $g$ son  dos funciones que tienen derivadas contiuas en  $[a,b]$ y si  $f(a)=f(b) = g(a)  = g(b) = 0$, pruebe que 
         $$\displaystyle{\int_{a}^{b} f(x)g^{''}(x) dx = \int_{a}^{b} f^{''}(x) g(x) dx}$$
       </p>
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Sean $a$ un  número real no cero arbitrario pero fijo. Prueba  la siguiente identidad:
       </p>
       $$\displaystyle{\int \mathrm{ln}(ax + b)   dx = \frac{1}{a} (ax +b) \mathrm{ln}(ax +b) -x + C } $$
     </div>
 
     
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Sea $n \in \mathbb{N}$. Prueba  la siguiente identidad:
       </p>
       $$\displaystyle{\int \mathrm{ln}^{n}(x)   dx = x\mathrm{ln}^{n}(x) - n \int \mathrm{ln}^{n-1}(x) dx } $$
