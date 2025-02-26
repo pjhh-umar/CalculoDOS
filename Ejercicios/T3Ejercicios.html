@@ -4,16 +4,16 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Following part is mathjax, for latex-->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- This part is for jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 
     <!-- This part is to load main.js -->
     <script type="text/javascript" src="../main.js"></script>
 
 
+    
 
 
     <!-- Next part is for new coomands -->
@@ -22,7 +22,8 @@
         tex: {
           macros: {
             sen: "\\operatorname{sen}",
-            seg: ["\\overrightarrow{#1}", 1]
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
           },
           tags: "ams", /* this part is for numbered equations */
           inlineMath: [['$', '$'], ['\\(', '\\)']]
@@ -30,59 +31,87 @@
       };
     </script>
 
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
+      }
 
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
 
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
 
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
     <!-- CSS -->
 
     <link rel="stylesheet" , href="../style.css" />
-
-    <!-- This part restart counter of cards to start at n+1 -->
-    <style>
-        body.number-title{
-          counter-reset: sectionCounter 2 cardCounter ;
-        }
-        h1.number-title{
-          counter-reset: sectionCounter 2 cardCounter ;
-        }
-      </style>
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Cálculo II</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría</div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+      
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
 
       
-  
-    <!-- Top Menu  -->
+        </header>
 
-
-    <header class="main-header">
-      <h1> Cálculo DOS  </h1>
         <nav class="top-nav">
           <ul>
             <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Informacion_General.html"> Información general </a> </li>
-            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Notas.html"> Notas  </a> </li> -->
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Ejercicios.html"> Ejercicios  </a> </li>
-            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Enlaces_externos.html"> Links </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Informacion_General.html"> Información</a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Notas.html"> Notas  </a> </li>
+            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Quizes.html"> Quizes  </a> </li>-->
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Ejercicios.html">Ejercicios</a></li> 
+            <!-- <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Examenes.html"> Archivos </a> </li> -->
+            <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Links.html"> Links</a> </li>
           </ul>
-        </nav>
-       <!-- 
-        <nav class="small-nav" align=right>
-          <button onclick="myFunction()">Claro/Obscuro 
-        </nav> 
-      -->
-
-      </header>
+          </nav>
+        
+        
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
 
       <!-- This part is for title in tab-->
-      <title> Ejercicios propuestos tercer parcial   </title>
-    
-  </head>
+            
+      <title>Ejercicios propuestos examen ordinario</title>
+      </head>  
 
 
-
-  <body class="fondo-body" >
-    <h1 class="number-title flexbox"> Ejercicios propuestos tercer parcial </h1>   
+  <body class="fondo-body" ><h1 class="page-title-practica">  Ejercicios propuestos tercer parcial </h1>   
        
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Calcular las siguientes integrales.
       </p>
@@ -113,7 +142,7 @@
     </div>
 
 
-    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Sean $f,g \colon \mathbb{R} \to \mathbb{R}$ funciones continuas tales que para todo $a \in \mathbb{R}$
         se satisface 
         $$\int_{-a}^{a} f(x) dx = \int_{-a}^{a} g(x) dx$$
@@ -122,7 +151,7 @@
     </div>
 
 
-    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
     <ol>
     <li>Si $\displaystyle{\int_{3}^{5} f(x) dx = 2}$, encuentra $\displaystyle{\int_{5}^{3} -4f(x)}$  </li>
     <li>Si $\displaystyle{\int_{5}^{-3} \left(\frac{-3f(x)}{4}\right) dx = 7 }$, encuentra $\displaystyle{\int_{5}^{-3} (6f(x) + 1) dx}$ </li>
@@ -135,7 +164,7 @@
 
 
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>
             Expresa los siguiente límites como integrales. No es necesario evaluar la integral.
         </p>
@@ -347,13 +376,13 @@
         </div>
 
 
-        <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+        <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
           <p>Sea $c$ el punto medio de $[a,b]$ y $m,h\in \mathbb{R}$ constantes 
             arbitrarias pero fijas. Prueba que 
             $$\int_{a}^{b} (m(x-c) + h ) dx = h(b-a)$$   </p>
       </div>
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p> Sea  $f \colon [a,b] \to \mathbb{R}$ una función continua  y positiva en $[a,b]$ y sea $c$
           el punto medio de $[a,b]$. Denotemos por $L$ la linea que es tangente a $y= f(x)$ en el 
           punto medio $(c,f(c))$. Si la gráfica de de $f$ se encuentra arriba de $L$, entonces prueba que
@@ -362,7 +391,7 @@
 
       </div>
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p> Sea  $f \colon [a,b] \to \mathbb{R}$ una función continua  y positiva en $[a,b]$ tal que 
           su gráfica  en el intervalo $[a,b]$ nunca se encuentra por debajo de la cuerda que une  $(a,f(a))$ y 
           $(b,f(b))$. Calculando el area del trapezoide cuyos vertices son $(a,0), (b,0) (b,,f(b))$ y $(a,f(a))$
@@ -373,20 +402,20 @@
       </div>
 
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>Sean $p,q$ números reales tales que $a>0$ y $b >0$. Prueba o da un contraejemplo de la siguiente identidad
           $$\int_{0}^{1} x^{p} \cdot x^{q} dx =\left( \int_{0}^{1} x^{p} dx \right)  \cdot \left(\int_{0}^{1} x^{q} dx \right)  $$ 
         </p>
       </div>
 
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>Prueba o da un contraejemplo de la siguiente identidad
           $$\int_{a}^{b} f(x)\cdot 1 dx = \left( \int_{a}^{b} f(x) dx \right)  \cdot \left(\int_{a}^{b} 1dx  \right)  $$ 
         </p>
       </div>
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>Encuentra en ejemplo de un intervalo $[a,b]$ y un par de funciones $f,g \colon [a,b] \to \mathbb{R}$
         integrables  en $[a,b]$ tales que $\displaystyle{\int_{a}^{b} g(x) \not = 0}$ y 
         $$\displaystyle{\int_{a}^{b}} \displaystyle{\frac{f(x)}{ g(x)}} dx \not= \frac{\displaystyle{\int_{a}^{b} f(x) dx }}{\displaystyle{\int_{a}^{b} g(x) dx }}$$
@@ -394,7 +423,7 @@
       </p>
       </div>
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>Para cada uno de los siguientes ejercicios la funcion $F\colon [0,\infty) \to \mathbb{R}$ es una función en la variable $x$ 
           que aparece en el límite (o los límites) de integración de la integral dada. Expresa la funcón $F(x)$ explicitamente calculando 
           la integral. 
@@ -408,15 +437,13 @@
       </div>
 
           
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Encuentra $p$, un polinomio de grado 3, tal que $p(0)=p(-1)=0, p(1)=5$ y  $2\displaystyle{\int_0^1 p(x)dx}=4$
       </p>
     </div>
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Encuentra todos los polinomios de grado 2, $p$, tales que $p(0)=1$ y $\displaystyle{\int_{-2}^{2}p(x)dx}=0$.
       </p>
@@ -428,7 +455,7 @@
     </div>
 
 
-    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+    <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>
             Calcular:
         </p>
@@ -475,8 +502,7 @@
       </div>
 
       
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <h3>La medida geométrica de un intervalo</h3>
       <p>
           
@@ -543,8 +569,7 @@
       </div>
 
 
-    <div class="ejercicio-box">
-      <h2 class="number-title"> Ejercicio</h2> 
+<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       <p>
           Da un ejemplo de una función $f:[a,b]\to \mathbb{R}$ tal que $f^2$ es integrable en $[a,b]$ pero $f$ no lo sea.
       </p>
@@ -731,7 +756,7 @@
       
       </div>
 
-      <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
       
       <p>Calcular las siguientes integrales indefinidas utilizando una substitución apropiada.</p>
       
@@ -752,14 +777,14 @@
       </div>
 
 
-       <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+       <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>
           Sea $f\colon \mathbb{R} \to \mathbb{R}$ una función continua en $\mathbb{R}$ tal que 
           $\displaystyle{\int_{1}^{2} f(x) dx = 4 }$. Prueba que existe $c \in [1,2]$ tal que $f(c)=4$
         </p>
        </div>
        
-       <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2> 
+       <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1> 
         <p>
           Sean $f,g \colon [a,b] \to \mathbb{R}$ funciones continuas en $[a,b]$ con $a < b$ tales que 
           $\displaystyle{\int_{a}^{b} (f(x) -g(x)) dx = 0 }$. Prueba que existe $c \in [a,b]$ tal que $f(c)=g(c)$
