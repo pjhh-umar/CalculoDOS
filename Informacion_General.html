@@ -15,31 +15,22 @@
     <!-- This part is to load main.js -->
     <script type="text/javascript" src="./main.js"></script>
 
-    
-<!-- Next part is for new coomands -->
-<script>
-  window.MathJax = {
-    tex: {
-      macros: {
-        sen: "\\operatorname{sen}",
-        seg: ["\\overrightarrow{#1}", 1]
-      },
-      tags: "ams" /* this part is for numbered equations */
-    }
-  };
-</script>
 
-<!-- This part is for using single $ for latex input, instead of \(\) -->
-<script>
-    MathJax = {
-    tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-    svg: {
-        fontCache: 'global'
-    }
-};
-</script>
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    
     <!-- CSS -->
 
     <link rel="stylesheet" , href="./style.css" />
@@ -104,11 +95,23 @@
                   <p>
                     <ul>
                       <li><h5 class="title">📝Examen:</h5>  $80 \%$</li><br>
-                      <li><h5 class="title">📚Quizes semanales:</h5>  $20 \%$</li>
-                      <p>El Quiz correspondiente a cada semana se aplica el lunes inmediato de la siguiente semana
-                        durante la segunda hora de clase. En éste se evaluarán conceptos fundamentales 
-                        vistos durante la semana previa. En la semana de examenes parciales no habra Quiz.
+                      <li><h5 class="title">📚Quizes semanales:</h5>  $20 \%$
+                        <p>El Quiz correspondiente a cada semana se aplica el lunes inmediato de la siguiente semana
+                          durante la segunda hora de clase. En éste se evaluarán conceptos fundamentales 
+                          vistos durante la semana previa. En la semana de examenes parciales no habra Quiz.
+                        </p>
+                    </li>
+                    <li>
+                      <h5 class="title">Bono de Puntualidad:</h5> Se otorgarán <strong>0.5 puntos</strong> adicionales sobre la calificación final del parcial.
+                      <p>
+                        <ul>
+                          <li>El bono se pierde automáticamente si el estudiante llega tarde una vez.</li>
+                          <li>Se permite una tolerancia máxima de <strong>10 minutos</strong> de retraso.</li>
+                          <li>Las faltas solo se justificarán con un permiso oficial emitido por el departamento de escolares.</li>
+                          <li>El beneficio será válido únicamente para quienes firmen y acepten las condiciones establecidas.</li>
+                        </ul>
                       </p>
+                    </li>
                       <!-- <li><b>🥊Prácticas🏋🏻:</b> 
                       <p>Semanalmente se publicarán en la página del curso 
                         <a href="https://pjhh-umar.github.io/CalculoUNO/Practicas.html"><b> prácticas</b></a> 
