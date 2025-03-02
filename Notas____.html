@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="./main.js"></script>
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+    .lista
+        {
+            counter-reset: listaCounter 0 sublistaCounter 1 subsublistaCounter 1 subsubsublistaCounter 1;
+        }
+        /* .sublista{
+            counter-reset: sublistaCounter 1  SubsublistaCounter;
+        } */
+        </style>
+
+    <style>
+            /* body.number-title
+            {
+            counter-reset: temaCounter 1 subsectioncounter ;
+            } */
+            body.fondo-body{
+              counter-reset: temaCounter 0 sectionCounter;
+            }
+
+            /* h1.page-number-title
+            {
+            counter-reset: sectionCounter 0;
+            }  */
+
+            h1.tema-number-title
+                {
+                counter-reset: sectionCounter 0;
+                } 
+
+            h1.number-title
+            {
+            counter-reset: subsectionCounter;
+            /* counter-reset: subsectionCounter; */
+            }
+
+
+
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="./style.css" />
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+            <div class="title">Cálculo II</div>
+            <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+            <div class="subsubtitle">Licenciatura en Actuaría </div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+
+      
+        </header>
+
+    <nav class="top-nav">
+        <ul>
+          <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Home.html"> Inicio  </a> </li>
+          <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Informacion_General.html">Información</a> </li>
+          <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Notas.html"> Notas  </a> </li>
+          <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Ejercicios.html"> Ejercicios</a> </li>
+          <li> <a href="https://pjhh-umar.github.io/CalculoDOS/Links.html"> Links </a> </li>
+        </ul>
+    </nav>
+    
+    <title> Semana 1  </title>
+    
+    </head>
+
+    <body class="fondo-body" >
+    
+    <div class="nota-box"> <h1 class="page-number-title"> Semana 1</h1> 
+    
+
+    <button class="respButton"><h1 class="tema-number-title"> Sucesiones </h1> </button>
+    <!-- <div class="resp-box flexbox">    -->
+        <!-- <h1 class="title"> Introducción</h1> -->
+
+  <!-- <h1 class="number-subtitle"> Modelo relacional </h1> (sistema de gestión de bases de datos relacionales)? </h1>  -->
+
+  <p>Los <i>Babilonios</i> tenían un procedimiento para calcular la \emph{raíz cuadrada 
+    de un número  real positivo} \(A\) <!-- \cite{FOWLER1998366}-->. El primer paso en
+    este método, consiste en  proponer una  aproximación inicial $a_{0} >0$ a la raíz 
+    cuadrada de $A$. Luego, se  define un segundo término  $a_{1}$  a partir de $a_{0}$ 
+    de la siguiente manera:
+    $$a_1:=\frac{1}{2}\left(a_0+\frac{A}{a_0}\right)$$
+    Continuando inductivamente con este procedimiento una vez obtenidos
+    $a_{0},a_{1},\ldots, a_{n}$ se obtiene el término \(a_{n+1}\) mediante la aplicación
+    de la siguiente fórmula:
+    $$a_{n+1}:=\frac{1}{2}\left(a_n+\frac{A}{a_n}\right)$$
+    Lo que los Babilonios observaron es que si se repetían este procedimiento  una 
+    cantidad grande de veces, el número resultante es una mejor aproximación al 
+    valor \(\sqrt{A}\) comparada con la aproximación  inicial \(a_0\).
+  </p>
+
+  <p>
+    Siguiendo este procedimiento se obtiene una <i>lista</i> o <i>sucesión de números</i> 
+    $a_{0},a_1,a_2,\dots  $ de tal manera que si tomamos números más adelante en la lista,
+    obtenemos una mejor aproximación
+    a el valor de  \(\sqrt{A}\), es decir, los números \(a_n\) tienden a \(\sqrt{A}\) 
+    cuando \(n\) va creciendo. Por éste ejemplo y muchos otros el estudio de las 
+    sucesiones es importante.
+    <!-- %Esto se denota como $\displaystyle{\lim_{n\to \infty} a_n= \sqrt{A}}$ -->
+  </p>
+
+  <p>
+    Otro hecho relevante donde aparecen  sucesiones y series es en la 
+    <i>representación decimal infinita de los números reales</i>, una breve introducción 
+     a este tema se puede encontrar en <!-- \cite{ApostolAnalisismatematico,gordon2002real}-->,
+    observemos que  
+    $$\frac{1}{3} = \frac{3}{10} + \frac{3}{10^2} + \frac{3}{10^3} + \cdots $$ 
+    Esto es, el número $\displaystyle{\frac{1}{3}}$  se puede  expresar como una 
+    <i>``suma infinita''</i> de números reales.
+  </p>
+
+  <p>
+    Finalmente, una última referencia que refleja la importancia de las sucesiones y 
+    series es la famosa <i>paradoja de Aquiles y la tortuga</i> inventada por 
+     <i>Zenón de Elea</i>, filósofo Griego que vivió entre 490 A.C. y 430 A.C. En la 
+     paradoja de Aquiles y la tortuga, Aquiles está disputando una carrera contra una
+    tortuga. Aquiles concede a la tortuga una ventaja, de $a_{1}$ metros. Suponiendo
+    que ambos corren a velocidad constante, tras un tiempo finito, en cierta cantidad
+    de tiempo Aquiles recorrerá  $a_{1}$ metros, alcanzando el punto de partida de la
+    tortuga. Sin embargo, durante este mismo tiempo, la tortuga ha corrido una 
+    distancia mucho más corta, digamos que $a_{2}$ metros. Luego, Aquiles tardará un 
+    poco más de tiempo en recorrer esta distancia $a_{2}$, intervalo en el que la 
+    tortuga habrá avanzado un poco más, supongamos que $a_{3}$ metros; por lo que a 
+    Aquiles aún le queda algo más de tiempo para llegar a este tercer punto, mientras 
+    la tortuga sigue avanzando. Por lo tanto, cada vez que Aquiles llega a algún lugar
+    donde ha estado la tortuga, todavía tiene algo de distancia que recorrer antes de
+    que pueda alcanzarla. Zenón concluye que Aquiles nunca alcanza a la tortuga <!-- ver 
+    \cite{Thezenonparadoxes,Sucnumrealesseriesylparadojadezenon}-->. 
+    Esta conclusión, aunque evidentemente contradice a la realidad  es la esencia de 
+    la paradoja. En general, las paradojas de Zenón desafiaban el sentido común, el 
+    problema de estas paradojas es que involucraban la suma  de una cantidad infinita 
+    de números positivos.
+  </p>
+
+
+  <h1 class="number-title"> Definición</h1>
+  <p>Sea $A$ un subconjunto no vacío  de números reales. Una <b>sucesión en $A$</b> 
+    es una función $f$ definida en $\mathbb{N}$ con valores en $A$, es decir, 
+    $f\colon\mathbb{N} \to A$ y se denota por $(a_n)_{n=1}^{\infty}$ donde $a_n:=f(n)$,
+    para todo $n\in \mathbb{N}$.
+  </p>
+
+
+  <h1 class="number-title"> Ejemplos</h1>
+  <p>
+    <ol>
+      <li>$(n^2)_{n=1}^\infty$</li><br>
+      <li>$\left(\displaystyle{(-1)^{n}}\right)_{n=1}^\infty$</li><br>
+      <li>$\left(\displaystyle{\frac{1}{n}}\right)_{n=1}^\infty$</li><br>
+      <li>$\left(\displaystyle{\frac{\pi}{\sqrt{n}}}\right)_{n=1}^\infty$</li><br>
+      <li>Una sucesión $(a_{n})_{n=0}^{\infty}$ es una
+         <b>sucesión aritmética con término inicial $a$ y diferencia $d$</b> si el primer 
+         término de la sucesión es $a$ y la diferencia entre dos términos consecutivos 
+         de la sucesión es $d$. Por lo tanto, el $n$-ésimo término de la sucesión aritmética
+        esta determinado por: $a_{n} := a + n d$ para todo número natural $n \geq 2$. 
+        <!-- Un resultado interesante en \emph{Teoría de números} que involucra sucesiones
+        aritméticas, conocido como el \emph{teorema de Dirichlet}.  \cite{apostol1998introduction}  establece que existe un número infinito de primos de la forma $a + nd$, donde $\mathrm{mcd}(a, d) = 1$. --> </li><br>
+      <li>Una sucesión $(a_{n})_{n=0}^{\infty}$ es una  <b>sucesión geométrica con 
+        término inicial $a$  y razón $r$</b> si cada término se obtiene multiplicando 
+        el anterior por $r$. Por lo tanto, el $n$-ésimo término de la sucesión geométrica 
+        se define como: $a_{n} = a r^{n}$. </li>
+    </ol>
+  </p>
+  <p>
+    Las sucesiones aritméticas  y geométricas juegan un papel importante en las Olimpiadas de Matemáticas.
+  </p>
+
+  <p>Como las sucesiones son sólo funciones se tienen las mismas reglas que para la suma, 
+    el producto y el cociente de funciones,  lo que que nos permite definir 
+    una <i>aritmética de sucesiones</i>.</p>
+
+  <h1 class="number-title"> Definición</h1>
+
+
+<p>Sean $\alpha \in \mathbb{R}$ y $(a_n)_{n=1}^{\infty}$, $(b_n)_{n=1}^{\infty}$ sucesiones en $\mathbb{R}$. Entonces, 
+  <ol>
+    <li>$(a_n)_{n=1}^{\infty} \pm (b_n)_{n=1}^{\infty} := (a_n \pm b_n)_{n=1}^{\infty}$</li><br>
+    <li>$(a_n)_{n=1}^{\infty} \cdot (b_n)_{n=1}^{\infty} := (a_n \cdot b_n)_{n=1}^{\infty}$</li><br>
+    <li>$ \alpha \cdot (a_n)_{n=1}^{\infty} := ( \alpha \cdot  a_n )_{n=1}^{\infty}$</li><br>
+    <li>Si además $b_n \neq 0$ para todo $n \in \mathbb{N}$, entonces $\displaystyle{\frac{\displaystyle{ (a_n)_{n=1}^{\infty}}}{\displaystyle{ (b_n)_{n=1}^{\infty} }} := \left(\frac{a_n}{b_n} \right)_{n=1}^{\infty}}$</li>
+  </ol>
+</p>
+
+<h2 class="title"> Observación.</h2>
+
+<p>Uno de los aspectos más importantes de las sucesiones de números reales es
+  ``<i>lo que pasa al final</i>''. Dado que los números  naturales no están acotados 
+  superiormente, no hay un último número natural y por lo tanto no hay formalmente
+  un último  término  de la sucesión. Sin embargo, teniendo presente la idea del
+  algoritmo de la introducción, podemos concentrarnos en estudiar el comportamiento
+  de los elementos de la sucesión cuando el índice es cada vez más grande. En ocasiones, 
+  es posible encontrar un número real $L$ tal que los términos de la sucesión se van 
+  acercando cada vez más a $L$, es decir, con sólo tomar el índice lo suficientemente 
+  grande los correspondientes términos de la sucesión están tan cerca como se desee de
+  $L$. Se precisa esta idea en la siguiente definición. 
+
+</p>
+
+<h1 class="number-title" id="def:suc_convergente"> Definición</h1>
+<p>Sea $L\in \mathbb{R}$.  Una sucesión $(a_n)_{n=1}^\infty$ de números reales 
+  <b>converge a  $L$</b>, si para todo \(\varepsilon > 0\) existe $N\in \mathbb{N}$ tal 
+  que para todo $n\in \mathbb{N}$ con \(n \geq N\) se satisface 
+  \begin{equation}\label{Eq:cond_conv}
+  |a_n- L| <\varepsilon.
+  \end{equation}
+  Se denota este hecho por $\displaystyle{L= \lim_{n\to \infty} }a_n$ y se dice 
+  que la sucesión es convergente. 
+</p>
+
+  <p>
+    El número $N$ en la <a href="#def:suc_convergente">Definición anterior</a> puede depender de $\varepsilon$ 
+    en el siguiente sentido, para un $\varepsilon$ más pequeño puede ser necesario un número  $N$ más grande
+    para que se cumpla la condición \eqref{Eq:cond_conv}. Además importante señalar que no es suficiente con 
+    encontrar un término de la sucesión cuyo índice sea mayor o igual que $N$ y que verifique la condición
+    \eqref{Eq:cond_conv}, es necesario  que la distancia de $L$ a cada término de la sucesión con índice mayor
+    o igual que $N$ sea menor que $\varepsilon$. Esta definición se aprecia mejor a través de la gráfica de
+    la función que define a la sucesión, ver <a href="#fig:Suc_Conv">Figura</a> . En algún  momento, todos
+    los puntos a la derecha se deben encontrar en la banda de ancho $2\varepsilon$ con centro en la recta
+    horizontal de altura $L$. 
+  </p>
+ 
+  <p id="fig:Suc_Conv">
+    <div class="flexbox" >
+      <img src="./Imagenes/limite1.png" alt="" width="100%" height="auto">
+    </div>
+  </p>
+
+  <p>
+    Otra interpretación gráfica de la <a href="#def:suc_convergente"> Definición</a>  se obtiene si dibujamos los
+    términos de la sucesión en la recta numérica, ver <a href="#fig:Suc_Conv2">Figura</a>  Se deduce que
+    $L=\displaystyle{\lim_{n\to \infty} a_{n}}$ si a partir de cierto término $a_{N}$ de la sucesión, los
+    términos $a_{N}, a_{N+1}, a_{N+2},\ldots$ se encuentran en el intervalo $(L-\varepsilon,L+\varepsilon)$.
+  </p>
+    <p id="fig:Suc_Conv2">
+      <div class="flexbox">
+        <img src="./Imagenes/limite2.png" alt="" width="100%" height="auto">
+      </div>
+    </p>
+
+
+<h1 class="number-title" id="</a>"> Ejemplo.</h1>
+<p>La sucesión  $\left(\displaystyle{\frac{1}{n}}\right)_{n=1}^{\infty}$ es una sucesión  convergente.
+</p>
+
+<!-- 
+  <p>
+    <div class="flexbox">
+      <img src="../Imagenes/BD/Relaciones_en_1FN_2.JPG" alt="", width="auto" height="auto">
+    </div>
+  </p> -->
+
+  <h2 class="title"> Observación.</h2>
+  <p>
+    El <a href="#Ej:Suc_Conv">Ejemplo</a>   nos deja una experiencia más respecto a la <a href="#def:suc_convergente">Definición</a> 
+    , esta definición permite comprobar que un número real propuesto $L$ es en realidad el límite de la sucesión dada. No proporciona ningún medio para determinar inicialmente cuál podría ser ese valor, en la práctica con frecuencia es necesario conjeturar quien es el límite de la sucesión. Sin embargo, existen algunos resultados que contribuyen a este fin.</p>
+
+<h1 class="number-title"> Proposición</h1>
+<p>Sea $(a_{n})_{n=1}^{\infty}$ una sucesión en $\mathbb{R}$. Si $L_{1}$ y $L_{2}$ son números reales tales que   $\displaystyle{\lim_{n\to \infty} }a_n = L_{1}$ y $\displaystyle{\lim_{n\to \infty} }a_n= L_{2}$, entonces $L_{1}=L_{2}$.
+</p>
+
+
+  <h1 class="number-title"> Teorema</h1>
+  <p>
+    Sean $(a_n)_{n=1}^\infty$, $(b_n)_{n=1}^\infty$ sucesiones de números reales convergentes. Se satisfacen las siguientes proposiciones.
+    <ol>
+    <li> \(\displaystyle{\lim_{n\to \infty}}(a_n+b_n)= \displaystyle{\lim_{n\to \infty}} a_n + \lim_{n\to \infty}b_n\).</li><br>
+    <li> Si \(\alpha\in \mathbb{R}\), entonces 
+      \( \displaystyle{ \lim_{n\to \infty}}  \left(\alpha \cdot a_{n} \right) = \alpha \cdot \lim_{n\to \infty}a_n\).</li><br>
+    <li>$\displaystyle{\lim_{n\to \infty}} (a_n \cdot b_n)=
+      \left( \lim_{n\to \infty} a_n \right) \cdot \left( \lim_{n\to \infty}b_n\right)$</li><br>
+    <li>Si $b\not= 0 $ para todo $n \in \mathbb{N}$ y  $\displaystyle{\lim_{n\to \infty} } b_{n} \not= 0$, entonces $\displaystyle{\lim_{n\to \infty}} \left(\frac{a_n}{b_n}\right)=
+      \frac{\displaystyle{\lim_{n\to \infty} a_n}}{\displaystyle{\lim_{n\to \infty}b_n}}$</li><br>
+    <li>Si  $a_n \leq b_n$ para todo $n\in \mathbb{N}$, entonces 
+        \(\displaystyle{\lim_{n\to \infty}a_n \leq \lim_{n\to \infty}b_n}\).</li><br>
+    <li>Si $(x_n)_{n=1}^\infty$ es una sucesión en $\mathbb{R}$ tal que $a_{n}\leq x_{n} \leq b_{n}$  para todo $n \in \mathbb{N}$, entonces $(x_n)_{n=1}^\infty$ es una sucesión convergente y $\displaystyle{\lim_{n \to \infty } x_n = \lim_{n \to \infty } a_n}$</li><br>
+    </ol>
+  </p>
+
+  <h1 class="number-title" id="Suc_no_convergente_No_acotada"> Ejemplo.</h1>
+  <p> La sucesión $\left( (-1)^n \right)_{n=1}^{\infty}$ no es convergente.    
+  </p>
+
+  <h1 class="number-title"> Proposición</h1>
+  <p>Una sucesión de números reales $(a_{n})_{n=1}^{\infty}$ no es convergente, si para todo
+    $L \in \mathbb{R}$ existe $\varepsilon >0$ tal que para todo $N\in \mathbb{N}$, existe $n_{0}\in \mathbb{N}$
+    con $n_{0}\geq N$ y tal que $|a_{n_{0}} - L| \geq \varepsilon$. 
+  </p>
+
+
+  <h2 class="title"> Observación.</h2>
+    <p>
+      En las <a href="#fig:Suc_Conv">Figura</a>  y <a href="#fig:Suc_Conv2">Figuras</a> se aprecia que todos los elementos de una sucesión convergente se terminan ``acumulando'' alrededor del límite, es decir, el límite de una sucesión es un \emph{punto de acumulación} de la imagen de la sucesión, esta propiedad es característica de las sucesiones convergentes y nos lleva a la siguiente definición.</p>
+
+      <h1 class="number-title"> Definición</h1>
+      <p>
+        Una sucesión de números reales  $(a_n)_{n=1}^\infty$ es acotada, si existe un número  real $M>0$ tal que $|a_n| \leq M$, para todo $n\in \mathbb{N}$.
+      </p>
+
+  <h1 class="number-title" id="Prop:suc_acotadas"> Proposición</h1>
+      <p>
+        Si \((a_n)_{n=1}^\infty\) es una sucesión de números reales convergente, entonces \((a_n)_{n=1}^\infty\) es una sucesión acotada.
+      </p>
+
+      <p>De la <a href="#Prop:suc_acotadas">Proposición</a> se siguen un par de observaciones interesantes. 
+        La primera, inmediatamente se deduce que si una sucesión no es acotada, entonces no es convergente. 
+        La  segunda, el <a hfref="#Ej:Suc_no_convergente_No_acotada">Ejemplo</a> muestra que no se verifica el
+        recíproco de la <a href="#Prop:suc_acotadas">Proposición</a> .
+      </p>
+
+      <p>Hasta este momento, es posible identificar dentro de la colección  de  sucesiones de números reales, 
+        a las sucesiones convergentes y a una clase que es aún más grande que la primera, las sucesiones acotadas.
+        Sin embargo, es posible identificar otras sucesiones que también  desempeñan un papel importante en el
+        desarrollo del tema, se trata de las \emph{sucesiones monótonas}.
+      </p>
+
+    <h1 class="number-title">Definición</h1>
+    <p>Sea $(a_n)_{n=1}^\infty$ una sucesión de números reales.</p>
+    <p>Si $a_{n} \geq a_{n+1}$ para todo $n\in \mathbb{N}$ se dice que la sucesión $(a_n)_{n=1}^\infty$  es
+       <b>monótona decreciente</b>. Mientras que, si $a_{n} \leq a_{n+1}$ para todo $n\in \mathbb{N}$ diremos 
+       que la sucesión $(a_n)_{n=1}^\infty$ es <b>monótona creciente</b>.
+    </p>
+      
+    <p>Se dice que la sucesión $(a_n)_{n=1}^\infty$ es <b>monótona</b>  si es monótona  creciente o monótona  decreciente.</p>
+
+      <p>Intuitivamente si los términos de una sucesión crecen o decrecen de forma ``descontrolada'' (i.e. son cada vez más grandes o más pequeños respectivamente), entonces la sucesión no converge a un número real. El comportamiento de esta clase de sucesiones motiva a la siguiente definición.
+
+      </p>
+    
+      <h1 class="number-title">Teorema</h1>
+      <p>Sea $(a_n)_{n=1}^\infty$ una sucesión de números reales. Si $(a_n)_{n=1}^{\infty}$ es monótona y acotada, entonces $(a_n)_{n=1}^\infty$ es convergente. </p>
+    
+</div>
+
+
+    </div>
+
+</body>
