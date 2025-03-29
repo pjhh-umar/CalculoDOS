@@ -220,6 +220,7 @@ width: auto;
   }
 
 
+
 .title{
   font-size: 180%;
   font-weight: 800; 
@@ -1587,4 +1588,13 @@ ol li::marker{
 .subsubsublista li::after{
   /* font-weight: bold; */
   content: " "
+}
+
+
+.mi-banner {
+  width: 100%; /* Ocupar todo el ancho de la página */
+  height: 100px; /* Ajusta la altura según necesites */
+  background-image: url('tu-imagen.jpg'); /* Ruta de la imagen */
+  background-repeat: repeat-x; /* Repetir solo horizontalmente */
+  background-size: auto 100px; /* Ajustar la altura de la imagen */
 }
