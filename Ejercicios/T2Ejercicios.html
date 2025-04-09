@@ -35,7 +35,7 @@
       counter-reset: temaCounter 1 subsectioncounter ;
       } */
       body.fondo-body{
-        counter-reset: temaCounter 1 sectionCounter;
+        counter-reset: temaCounter 2 sectionCounter EjercicioResueltoCounter 1;
       }
 
       /* h1.page-number-title
@@ -94,7 +94,7 @@
       </header>
 
       <!-- This part is for title in tab-->
-      <title> Ejercicios propuestos examen ordinario   </title>
+      <title> Ejercicios propuestos segundo examen parcial   </title>
     
   </head>
 
@@ -170,8 +170,7 @@
         
 
 
-    <div class="ejercicio-box"> 
-      <h1 class="number-title-practica" id="Ejer:SumasSupInfCubica"> Ejercicio</h1>  
+    <div class="ejercicio-resuelto-box" id="Ejer:SumasSupInfCubica"><h1 class="title-practica"> Ejercicio resuelto</h1>
         <p>
             Este ejercicio  es similar al anterior pero para 
             la función \(f:[0,b]\to \mathbb{R}\) dada por $f(x)=x^3$.  
@@ -190,17 +189,21 @@
         Este ejercicio se interpreta como que el area bajo la curva \(y=x^3\), de \(0\) a \(b\)
         es \(\displaystyle{\frac{b^4}{4}}\).
     </p> -->
-      <button class="respButton hvr-grow "> Solución  </button>
-        <div class="resp-box flexbox">
-          <div class="flexbox">
-            <a href="https://youtu.be/HVk1gIwSvVU" target="_blank" > Video </a>
-          </div>
-        </div>
+  </p>
+  <center>
+    <button class="respButton hvr-grow">Demostración</button>
+    <div class="resp-box flexbox">
+      <iframe width="95%" height="90%" class="video"
+      src="https://www.youtube.com/embed/HVk1gIwSvVU?si=jxPYCgWblScZhiPe" title="YouTube video player" allowfullscreen="true"> 
+      </iframe>
+    </div>
+  </center>
+     
     </div>
 
    
-    <div class="ejercicio-box"> 
-      <h1 class="number-title-practica"> Ejercicio</h1> 
+    <div class="ejercicio-resuelto-box" ><h1 class="title-practica"> Ejercicio resuelto</h1>
+
       <p>
           Las funciones características tienen muchas propiedades que reflejan 
           propiedades de conjuntos. En este ejercicio se presentan  algunas de ellas.
@@ -225,12 +228,16 @@
               para toda \(x\in \mathbb{R}\).
           </li>
       </ol>
-      <button class="respButton hvr-grow "> Solución  </button>
-      <div class="resp-box flexbox">
-        <div class="flexbox">
-          <a href="https://youtu.be/65HXTsImGPc" target="_blank" > Video </a>
+     
+      <center>
+        <button class="respButton hvr-grow">Demostración</button>
+        <div class="resp-box flexbox">
+          <iframe width="95%" height="90%" class="video"
+          src="https://www.youtube.com/embed/65HXTsImGPc?si=jHkcSM67rUSJnAsV" title="YouTube video player" allowfullscreen="true"> 
+          </iframe>
         </div>
-      </div> 
+      </center>
+         
   </div>
   
   
@@ -296,19 +303,21 @@
         </div>
 
                 
-        <div class="ejercicio-box"> 
-          <h1 class="number-title-practica"> Ejercicio</h1>  
+        <div class="ejercicio-resuelto-box" ><h1 class="title-practica"> Ejercicio resuelto</h1>
           <p>
               Demuestra que para todo número natural $n$ se verifica que:
 
               $$\int_0^{n^2} \lfloor \sqrt{t} \rfloor dt=n(n-1)(4n+1)/6.$$
           </p>
-          <button class="respButton hvr-grow "> Demostración  </button>
-          <div class="resp-box flexbox">
-            <div class="flexbox">
-              <a href="https://youtu.be/QNGlSYgcSBU" target="_blank" > Video </a>
+          <center>
+            <button class="respButton hvr-grow">Demostración</button>
+            <div class="resp-box flexbox">
+              <iframe width="95%" height="90%" class="video"
+              src="https://www.youtube.com/embed/QNGlSYgcSBU?si=h72Pp7SzwkLB4oFq" title="YouTube video player" allowfullscreen="true"> 
+              </iframe>
             </div>
-          </div>
+          </center>
+            
         </div>
                 
                 
@@ -319,22 +328,24 @@
         </div>
 
                 
-        <div class="ejercicio-box"> 
-          <h1 class="number-title-practica" > Ejercicio</h1>  
+        <div class="ejercicio-resuelto-box" ><h1 class="title-practica"> Ejercicio resuelto</h1>
           <p> Supongamos que $s, \tilde{s}:[a,b] \to \mathbb{R}$ son funciones escalonadas 
               y que $s = \tilde{s}$, excepto en un número finito de puntos. Prueba que
               
               $$\displaystyle{\int_{a}^{b} s(x) dx=\int_{a}^{b}\tilde{s}(x) dx}$$.
           </p>
-          <p><b>Sugerencia:</b> Usar el <a href="#Ejer:LemaAditividadIntervalosEscalonadas"> Ejercicio 2.13 </a> 
+          <p><b>Sugerencia:</b> Usar el <a href="#Ejer:LemaAditividadIntervalosEscalonadas"> Ejercicio 2.10 </a> 
               e inducción sobre el número de puntos donde son distintos.
           </p>
-          <button class="respButton hvr-grow "> Demostración  </button>
-          <div class="resp-box flexbox">
-            <div class="flexbox">
-              <a href="https://youtu.be/zhBTqGOFvWI" target="_blank" > Video </a>
+          
+          <center>
+            <button class="respButton hvr-grow">Demostración</button>
+            <div class="resp-box flexbox">
+              <iframe width="95%" height="90%" class="video"
+              src="https://www.youtube.com/embed/zhBTqGOFvWI?si=7Gc_Uko13gv-L29L" title="YouTube video player" allowfullscreen="true"> 
+              </iframe>
             </div>
-          </div>
+          </center>
         </div>
 
                 
@@ -348,7 +359,7 @@
               $$
           </p>
           <p> <b>Sugerencia</b>: usa inducción sobre la longitud de la partición 
-              y el ejercicio  <a href="#Ejer:LemaAditividadIntervalosEscalonadas">Ejercicio 2.13.</a>
+              y el ejercicio  <a href="#Ejer:LemaAditividadIntervalosEscalonadas">Ejercicio resuelto 2.5.</a>
           </p>
         </div>
 
@@ -368,20 +379,21 @@
         </div>
 
               
-      <div class="ejercicio-box"> 
-        <h1 class="number-title-practica" id="Ejer:LemaUnionParticionesEscalonadas"> Ejercicio</h1>  
+        <div class="ejercicio-resuelto-box" id="Ejer:LemaUnionParticionesEscalonadas"><h1 class="title-practica"> Ejercicio resuelto</h1>
         <p>
             Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas. Por $P_s$ y $P_t$ denotamos 
             las particiones asociadas a  $s$ y $t$, respectivamente. 
             Denota $Q=P_t\vee P_s=\{ z_k\}_{k=0}^p$. Demuestra que, para todo $k=1,\dots, p$, 
             $s$ es constante en $(z_{k-1}, z_k)$ y t es constante en $(z_{k-1}, z_k)$.
         </p>
-        <button class="respButton hvr-grow "> Demostración  </button>
-        <div class="resp-box flexbox">
-          <div class="flexbox">
-            <a href="https://youtu.be/fjhj_WxcVg8" target="_blank" > Video </a>
+        <center>
+          <button class="respButton hvr-grow">Demostración</button>
+          <div class="resp-box flexbox">
+            <iframe width="95%" height="90%" class="video"
+            src="https://www.youtube.com/embed/fjhj_WxcVg8?si=GKT-2ehiL6MUC2du" title="YouTube video player" allowfullscreen="true"> 
+            </iframe>
           </div>
-        </div>
+        </center>
       </div>
 
       <div class="ejercicio-box">
@@ -406,7 +418,7 @@
             <li>Si $\alpha$ es una constante, la función $\alpha s$, es otra vez  
                 una función escalonada.<br></li> 
         </ol>
-        <p><b>Sugerencia:</b> usa el <a href="#Ejer:LemaUnionParticionesEscalonadas">Ejercicio 2.17.</a> 
+        <p><b>Sugerencia:</b> usa el <a href="#Ejer:LemaUnionParticionesEscalonadas">Ejercicio resuelto 2.6.</a> 
         </p>
 
       </div>
@@ -464,8 +476,7 @@
       </div>
 
             
-      <div class="ejercicio-box"> 
-        <h1 class="number-title-practica"> Ejercicio</h1>  
+      <div class="ejercicio-resuelto-box"><h1 class="title-practica"> Ejercicio resuelto</h1>
         <p>
             Sean $s,t:[a,b]\to \mathbb{R}$ dos funciones escalonadas.
             <ol>
@@ -473,12 +484,14 @@
                 <li>Si $s(x)\not=0$, para toda $x$, demuestra que $\displaystyle{\frac{1}{s}}$ es una función escalonada.</li><br>
             </ol>
         </p>
-        <button class="respButton hvr-grow "> Demostración  </button>
-        <div class="resp-box flexbox">
-          <div class="flexbox">
-            <a href="https://youtu.be/meq6Mp0bttM" target="_blank" > Video </a>
+        <center>
+          <button class="respButton hvr-grow">Demostración</button>
+          <div class="resp-box flexbox">
+            <iframe width="95%" height="90%" class="video"
+            src="https://www.youtube.com/embed/meq6Mp0bttM?si=eLiwMr9jGw606d7t" title="YouTube video player" allowfullscreen="true"> 
+            </iframe>
           </div>
-        </div>
+        </center>
       </div>
 
             
@@ -530,7 +543,7 @@
       </div>
 
         
-      <div class="ejercicio-box"> <h1 class="number-title-practica" id="Ejer:integral_x_al_cuadrado"> Ejercicio</h1> 
+      <div class="ejercicio-resuelto-box"  id="Ejer:integral_x_al_cuadrado"><h1 class="title-practica"> Ejercicio resuelto</h1>
         <p>
             Considera la parábola \(f:[0,b]\to \mathbb{R}\), \(f(x)=x^2\) ,donde \(b>0\).
         </p>
@@ -560,12 +573,15 @@
                     \int_0^b x^2 dx =\frac{b^3}{3}
                 \]
             </li><br>
-        <button class="respButton hvr-grow "> Demostración  </button>
-          <div class="resp-box flexbox">
-            <div class="flexbox">
-              <a href="https://youtu.be/qHy2XeG2Dqw" target="_blank" > Video </a>
-            </div>
-          </div>
+            <center>
+              <button class="respButton hvr-grow">Demostración</button>
+              <div class="resp-box flexbox">
+                <iframe width="95%" height="90%" class="video"
+                src="https://www.youtube.com/embed/qHy2XeG2Dqw?si=Fu4uZtPO29M1EdIQ" title="YouTube video player" allowfullscreen="true"> 
+                </iframe>
+              </div>
+            </center>
+        
     </div>
 
  
