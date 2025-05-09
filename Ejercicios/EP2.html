@@ -29,7 +29,7 @@
           tags: "ams", /* this part is for numbered equations */
           inlineMath: [['$', '$'], ['\\(', '\\)']]
         }
-      };
+      }
     </script>
 
     
@@ -829,6 +829,132 @@
           </li> 
           </ol>
         </div>
+
+        <div class="nota-box"><h1 class="number-title-practica"id="Ejer:IntegralesPotencias1"> Ejercicio</h1>
+          <p>Sea $k \in \mathbb{N}$ arbitrario pero fijo. 
+            <!-- Este ejercicio ayuda a calcular la integral de $x\mapsto x^k$ en $[0,b]$.  -->
+          </p> 
+      
+          <ol>
+              <li>
+              Demuestra que para todo  $n\geq 1$ natural:
+              $$
+              \sum_{i=1}^{n-1}i^k \leq \frac{n^{k+1}}{k+1} \leq \sum_{i=1}^n i^k
+              $$
+              </li> 
+      
+            <li>
+                Dado $b>0$, utiliza los resultados vistos en clase para concluir que:
+                $$
+                    \int_0^b x^k dx = \frac{b^{k+1}}{k+1},
+                $$
+                
+            </li> 
+
+            <li>
+              Dados $0\leq a < b $ arbitrarios pero fijos, prueba que:
+              $$
+                  \int_a^b x^k dx = \frac{b^{k+1} - a^{k+1}}{k+1},
+              $$
+            </li> 
+          </ol>
+        </div>
+
+        <div class="nota-box">
+            <h1 class="number-title-practica"> Ejercicio</h1> 
+            <p>
+                Usa la interpretación de la integral como área bajo la curva, junto con la función $y=\sqrt[n]{x}$ en el rectángulo de lados $[0,b], 
+                [0, \sqrt[n]{b}]$, para demostrar que
+                $$
+                \int_0^b \sqrt[n]{x}dx=\frac{n}{n+1}b^{\frac{n+1}{n}}
+                $$
+            </p>
+        </div>
+
+
+
+        <div class="nota-box">
+          <h1 class="number-title-practica"> Ejercicio</h1> 
+          <p>
+              Fija un natural $k\geq 2$. Calcula los siguientes límites:
+          </p>
+          <ol class="two-column">
+              <li>
+                  $\displaystyle{\lim_{n\to \infty} \left( \frac{1}{n^{k+1}} \sum_{i=1}^n i^k\right)}$.
+              </li> 
+              <li>
+                  $\displaystyle{\lim_{n\to \infty} \left( \frac{1}{n^{(k+1)/k}} \sum_{i=1}^n \sqrt[k]{i}\right)}$.
+              </li> 
+          </ol>
+          <!-- <p>
+              Sugerencia: usa la identidad del  <a href="#Ejer:IntegrabilidadFuncionesMonotonas">Teorema 4.2</a>. 
+          </p> -->
+        </div>
+
+        <div class="ejercicio-box">
+          <h1 class="number-title-practica"> Ejercicio</h1> 
+          <p>
+              Calcula los siguiente límites.
+          </p>
+      
+          <ol class="two-column">
+              <li>
+                  $\displaystyle{ \lim_{n\to \infty} \frac{1}{n} \sum_{i=1}^n \sqrt{1+\frac{i}{n}}}$.
+              </li> 
+              <li>
+                  $\displaystyle{\lim_{n\to \infty} \frac{1}{n} \sum_{i=1}^n \left( 1+\frac{i}{n} \right)^2}$.
+              </li> 
+              <li>
+                  $\displaystyle{\lim_{n\to \infty} \frac{1}{n} \sum_{i=1}^n \sqrt{1+\frac{2i}{n}}}$.
+              </li> 
+              <li>
+                  $\displaystyle{\lim_{n\to \infty} \frac{1}{n} \sum_{i=1}^n \left( 1+\frac{2i}{n} \right)^2}$.
+              </li> 
+          </ol>
+          <!-- <p>
+              Sugerencia: usa el
+              la ecuación del  <a href="#Ejer:IntegrabilidadFuncionesMonotonas">Teorema 4.2</a> y recuerda que
+              $$
+              \int_a^b x^2 dx= \frac{b^3-a^3}{3}, \quad \int_a^b \sqrt{x}dx=  \frac{2}{3}(b^{3/2}-a^{3/2})
+              $$        
+          </p> -->
+          <center>
+            <button class="respButton hvr-grow">Demostración inciso 1</button>
+            <div class="resp-box flexbox">
+              <iframe width="95%" height="90%" class="video"
+              src="https://www.youtube.com/embed/ET_CK76kXJM?si=If00hxbVn5iBgnJu" title="YouTube video player" allowfullscreen="true"> 
+              </iframe>
+            </div>
+          </center>
+      </div>
+
+      <div class="nota-box">
+        <h1 class="number-title-practica"> Ejercicio</h1> 
+        <p>
+            Calcula las siguientes oscilaciones.
+        </p>
+      <ol>
+        <li>
+            Si $f(x)=mx+b$ y $I=[c,d]$ entonces  $\omega_f (I)=|m|(d-c) $
+        </li> 
+        <li>
+            Si $f(x)=\displaystyle{\frac{1}{x}}$ y $I=(0,1)$ entonces $\omega_f (I)=\infty$.
+        </li> 
+      </ol>
+      </div>
+
+      <div class="nota-box">
+        <h1 class="number-title-practica" id="Ejer:LemaContinuidadUniformeOscilacion"> Ejercicio</h1> 
+        <p>
+            Sea $f:[a,b]\to \mathbb{R}$ continua en $[a,b]$. 
+            Si $\varepsilon >0$ es arbitrario pero fijo y  $\delta >0$ es la de 
+            la continuidad uniforme de $f$ para $\varepsilon$. Demuestra que:
+            $$
+            \omega_f(I)\leq \varepsilon,
+            $$
+            para todo $I \subseteq [a,b]$, sub-intervalo de longitud menor a $\delta$.
+        </p>
+      </div>
 
 
 
