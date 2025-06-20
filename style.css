@@ -1598,3 +1598,16 @@ ol li::marker{
   background-repeat: repeat-x; /* Repetir solo horizontalmente */
   background-size: auto 100px; /* Ajustar la altura de la imagen */
 }
+
+hr{
+    border: none; /* Quita el borde predeterminado */
+    /* border-top: 2px solid #000; */ /* 2px de grosor, estilo SOLIDO, color negro */
+    border-top: 2px solid  rgb(0, 78, 148); /* Un borde superior punteado de 3px, color gris oscuro */
+    color: #0066ff; /* Color para navegadores más antiguos (fallback) */
+    /* background-color: #0073ff; */
+     /* Color de fondo para la línea */
+    /* height: 0.5px;  */
+    /* Altura de la línea */
+    width: 95%;
+    margin: 30px auto; /* Espacio arriba y abajo de la línea */
+  }
